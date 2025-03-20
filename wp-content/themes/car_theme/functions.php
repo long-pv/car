@@ -52,6 +52,7 @@ function car_theme_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'car_theme'),
+			'menu-footer' => esc_html__('Menu Footer', 'car_theme'),
 		)
 	);
 

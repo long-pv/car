@@ -1,0 +1,125 @@
+.footer {
+    padding-top: 48px;
+    padding-bottom: 16px;
+    background-image: url('../images/bg_footer.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .row {
+        row-gap: 24px;
+    }
+
+    .footer_logo {
+        display: inline-flex;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .footer_title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-bottom: 32px;
+    }
+
+    .footer_contact {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer_contact_item {
+        display: flex;
+        gap: 8px;
+
+        .icon {
+            display: inline-flex;
+        }
+
+        .link {
+            font-size: 16px;
+            color: #fff !important;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            color: #fff !important;
+        }
+    }
+
+    .footer_menu {
+        ul.menu {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &>li {
+                display: block;
+
+                &>a {
+                    text-decoration: none;
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff !important;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_mxh {
+        display: flex;
+        gap: 16px;
+
+        .footer_mxh_item {
+            display: inline-flex;
+        }
+    }
+
+    .footer_bottom {
+        margin-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding-top: 16px;
+    }
+
+    .footer_policy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #fff !important;
+
+        a {
+            text-decoration: none;
+            color: #fff !important;
+            font-size: 14px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .copyright {
+        color: #FFFFFF;
+        margin-top: 4px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
