@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * Template name: Demo
  * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
@@ -15,10 +16,24 @@
 
 get_header();
 ?>
-<div class="py-section">
+<div class="secSpace bg-warning">
 	<div class="container">
-		<div class="editor">
-			<?php the_content(); ?>
+		<h2>Button</h2>
+		<a href="#" class="btn_start">
+			Xem thêm
+		</a>
+		<a href="#" class="btn_down_app">
+			Xem thêm
+		</a>
+		<a href="#" class="btn_see_more">
+			Xem thêm
+		</a>
+		<a href="#" class="btn_view_all">
+			Xem thêm
+		</a>
+
+		<div class="sec_title">
+			Tiêu đề section
 		</div>
 	</div>
 </div>

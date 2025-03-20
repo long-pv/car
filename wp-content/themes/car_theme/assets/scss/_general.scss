@@ -1,9 +1,9 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    color: #333333;
-    font-size: 16px;
+    color: $body;
+    font-size: 14px;
 
     @include media-breakpoint-down(md) {
         -webkit-touch-callout: none;
@@ -17,80 +17,6 @@ body {
     min-height: calc(100vh - 100px);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700 !important;
-    line-height: 1.5 !important;
-}
-
-//------ Typography
-h6,
-.h6 {
-    font-size: 16px;
-}
-
-h5,
-.h5 {
-    font-size: 18px;
-}
-
-h4,
-.h4 {
-    font-size: 20px;
-}
-
-h3,
-.h3 {
-    font-size: 24px;
-}
-
-h2,
-.h2 {
-    font-size: 28px;
-}
-
-h1,
-.h1 {
-    font-size: 32px;
-}
-
-@include media-breakpoint-up(lg) {
-
-    h6,
-    .h6 {
-        font-size: 18px;
-    }
-
-    h5,
-    .h5 {
-        font-size: 20px;
-    }
-
-    h4,
-    .h4 {
-        font-size: 24px;
-    }
-
-    h3,
-    .h3 {
-        font-size: 28px;
-    }
-
-    h2,
-    .h2 {
-        font-size: 32px;
-    }
-
-    h1,
-    .h1 {
-        font-size: 40px;
-    }
-}
-
 .pointer-events {
     pointer-events: none !important;
 }
@@ -99,8 +25,8 @@ h1,
     text-align: justify !important;
 }
 
-$secSpacePC: 48px;
-$secSpaceSP: 32px;
+$secSpacePC: 60px;
+$secSpaceSP: 40px;
 
 .secSpace {
     padding-top: $secSpaceSP;
@@ -183,28 +109,11 @@ $secSpaceSP: 32px;
     @include line-clamp(3);
 }
 
-.secHeading {
-    margin-bottom: 24px;
-    position: relative;
-
-    &__title {
-        margin: 0px;
-        color: $primary;
-        text-transform: uppercase;
-    }
-
-    &__link {
-        margin-top: 16px;
-        color: $primary;
-
-        @include media-breakpoint-up(lg) {
-            position: absolute;
-            right: 0px;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-top: 0px;
-        }
-    }
+.sec_title {
+    color: $success;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .video {
@@ -222,623 +131,74 @@ $secSpaceSP: 32px;
     }
 }
 
-.favorite_posts {
-    position: absolute;
-    cursor: pointer;
-    right: 8px;
-    top: 8px;
-    width: 24px;
-    height: 24px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.49922 5.89893C5.28724 6.91003 3.66675 9.31498 3.66675 12.1828C3.66675 15.1127 4.8657 17.371 6.58446 19.3064C8.00105 20.9015 9.71586 22.2235 11.3882 23.5128C11.7855 23.819 12.1803 24.1234 12.5681 24.4292C13.2695 24.9821 13.8952 25.4674 14.4982 25.8198C15.1016 26.1724 15.5873 26.3333 16.0001 26.3333C16.4129 26.3333 16.8986 26.1724 17.5019 25.8198C18.105 25.4674 18.7306 24.9821 19.432 24.4292C19.8199 24.1234 20.2147 23.819 20.6119 23.5128C22.2843 22.2235 23.9991 20.9015 25.4157 19.3064C27.1345 17.371 28.3334 15.1127 28.3334 12.1828C28.3334 9.31498 26.7129 6.91003 24.5009 5.89893C22.352 4.91664 19.4645 5.17677 16.7206 8.02765C16.5321 8.22351 16.2719 8.33418 16.0001 8.33418C15.7282 8.33418 15.4681 8.22351 15.2796 8.02765C12.5356 5.17677 9.64817 4.91664 7.49922 5.89893ZM16.0001 5.94509C12.9173 3.18699 9.46536 2.80116 6.66777 4.07995C3.71303 5.43057 1.66675 8.56671 1.66675 12.1828C1.66675 15.7368 3.14741 18.4481 5.08904 20.6344C6.64391 22.3853 8.54705 23.8506 10.2278 25.1448C10.6089 25.4382 10.9785 25.7227 11.33 25.9998C12.013 26.5382 12.7461 27.1124 13.4892 27.5466C14.2319 27.9806 15.0795 28.3333 16.0001 28.3333C16.9206 28.3333 17.7683 27.9806 18.511 27.5466C19.254 27.1124 19.9872 26.5382 20.6702 25.9998C21.0217 25.7227 21.3913 25.4382 21.7723 25.1448C23.4531 23.8506 25.3563 22.3853 26.9111 20.6344C28.8528 18.4481 30.3334 15.7368 30.3334 12.1828C30.3334 8.56671 28.2871 5.43057 25.3324 4.07995C22.5348 2.80116 19.0828 3.18699 16.0001 5.94509Z' fill='white'/%3E%3C/svg%3E%0A");
-
-    &.active {
-        background-image: url("data:image/svg+xml,%3Csvg width='28' height='29' viewBox='0 0 28 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.33337 11.1601C2.33337 16.8335 7.02271 19.8568 10.4554 22.5628C11.6667 23.5177 12.8334 24.4168 14 24.4168C15.1667 24.4168 16.3334 23.5177 17.5447 22.5628C20.9774 19.8568 25.6667 16.8335 25.6667 11.1601C25.6667 5.48665 19.2499 1.46316 14 6.91753C8.75023 1.46316 2.33337 5.48665 2.33337 11.1601Z' fill='%23FF3974'/%3E%3C/svg%3E%0A") !important;
-    }
-}
-
-.comments_area {
-
-
-
-    /* Tổng thể từng bình luận */
-    .comment_item {
-        display: flex;
-        gap: 15px;
-        padding: 15px;
-        background: #fdfdfd;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        transition: background-color 0.3s;
-    }
-
-    .comment_item:hover {
-        background-color: #f4faff;
-    }
-
-    /* Avatar người dùng */
-    .comment_avatar img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #0073aa;
-    }
-
-    /* Nội dung bình luận */
-    .comment_content {
-        flex: 1;
-    }
-
-    /* Thông tin meta */
-    .comment_meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 5px;
-    }
-
-    /* Tên tác giả */
-    .comment_author {
-        font-weight: bold;
-        color: #0073aa;
-        font-size: 16px;
-    }
-
-    /* Ngày đăng */
-    .comment_date {
-        font-size: 13px;
-        color: #666;
-        font-style: italic;
-    }
-
-    /* Nội dung bình luận */
-    .comment_text {
-        margin: 10px 0;
-        font-size: 15px;
-        line-height: 1.6;
-        color: #333;
-    }
-
-    /* Nút trả lời */
-    .comment_reply a {
-        display: inline-block;
-        background-color: #0073aa;
-        color: #fff;
-        padding: 6px 12px;
-        border-radius: 4px;
-        font-size: 14px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-    }
-
-    .comment_reply a:hover {
-        background-color: #005f8a;
-    }
-
-    /* Hiệu ứng thụt lề cho bình luận trả lời */
-    .comment_item.depth-2 {
-        margin-left: 30px;
-        background-color: #eef7ff;
-    }
-
-    .comment_item.depth-3 {
-        margin-left: 60px;
-        background-color: #e0f3ff;
-    }
-
-    /* Tổng thể form bình luận */
-    #respond {
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 20px;
-    }
-
-    /* Tiêu đề form */
-    .comment-reply-title {
-        font-size: 20px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 15px;
-        position: relative;
-        padding-left: 10px;
-        border-left: 4px solid #0073aa;
-    }
-
-    /* Link hủy trả lời */
-    #cancel-comment-reply-link {
-        font-size: 14px;
-        color: #d9534f;
-        text-decoration: none;
-        margin-left: 10px;
-        font-weight: 700;
-    }
-
-    #cancel-comment-reply-link:hover {
-        text-decoration: underline;
-    }
-
-    /* Input và textarea */
-    .comment-form-author,
-    .comment-form-email,
-    .comment-form-comment {
-        margin-bottom: 15px;
-    }
-
-    .comment-form-author label,
-    .comment-form-email label,
-    .comment-form-comment label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #555;
-    }
-
-    .comment-form-author input,
-    .comment-form-email input,
-    .comment-form-comment textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-        transition: border-color 0.3s ease;
-        background-color: #fff;
-        box-sizing: border-box;
-    }
-
-    /* Hiệu ứng khi focus vào input */
-    .comment-form-author input:focus,
-    .comment-form-email input:focus,
-    .comment-form-comment textarea:focus {
-        border-color: #0073aa;
-        outline: none;
-        background-color: #f0f8ff;
-    }
-
-    /* Thông báo yêu cầu bắt buộc */
-    .required {
-        color: #d9534f;
-        font-weight: bold;
-    }
-
-    /* reCAPTCHA */
-    #cerber-recaptcha {
-        margin: 15px 0;
-    }
-
-    /* Nút gửi bình luận */
-    .form-submit input.submit {
-        background-color: #0073aa;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        opacity: 1;
-    }
-
-    .form-submit input.submit:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
-
-    .form-submit input.submit:hover:not(:disabled) {
-        background-color: #005f8a;
-    }
-
-    /* Responsive cho thiết bị nhỏ */
-    @media (max-width: 600px) {
-
-        .comment-form-author input,
-        .comment-form-email input,
-        .comment-form-comment textarea {
-            font-size: 14px;
-        }
-
-        .form-submit input.submit {
-            width: 100%;
-        }
-    }
-
-    .comment_pagination {
-        display: flex;
-        justify-content: flex-start;
-        gap: 10px;
-        margin: 20px 0;
-    }
-
-    .comment_pagination ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        gap: 5px;
-    }
-
-    .comment_pagination li {
-        display: inline-block;
-    }
-
-    .comment_pagination a,
-    .comment_pagination span {
-        padding: 8px 12px;
-        background-color: #0073aa;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .comment_pagination a:hover {
-        background-color: #005f8a;
-    }
-
-    .comment_pagination .current {
-        background-color: #005f8a;
-        font-weight: bold;
-    }
-}
-
-#compare_bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 2px solid #ddd;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-
-    .compare_products {
-        display: flex;
-        gap: 10px;
-
-        .compare_item {
-            position: relative;
-
-            img {
-                width: 60px;
-                height: 60px;
-                object-fit: cover;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-
-            .remove_compare {
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                background: #e74c3c;
-                color: #fff;
-                border: none;
-                border-radius: 50%;
-                width: 20px;
-                height: 20px;
-                cursor: pointer;
-                font-size: 12px;
-                line-height: 18px;
-                text-align: center;
-
-                &:hover {
-                    background: #c0392b;
-                }
-            }
-        }
-    }
-
-    #compare_now,
-    #clear_all_compare {
-        background: #27ae60;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-
-        &:hover {
-            background: #1e8449;
-        }
-    }
-}
-
-#compare_popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-
-    .popup_content {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        overflow-y: auto;
-
-        #close_compare_popup {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #e74c3c;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .compare_table_inner {
-            width: 100%;
-            border-collapse: collapse;
-
-            td {
-                border: 1px solid #ddd;
-                padding: 15px;
-                text-align: center;
-
-                img {
-                    max-width: 100px;
-                    height: auto;
-                    margin-bottom: 10px;
-                }
-
-                h3 {
-                    font-size: 16px;
-                    margin: 10px 0;
-                }
-
-                button.remove_compare {
-                    background: #c0392b;
-                    color: #fff;
-                    padding: 5px 10px;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: #a93226;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* quick-view-style.css */
-
-/* Bố cục tổng thể */
-.quick-view-product {
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    overflow: hidden;
-}
-
-/* Ảnh sản phẩm */
-.quick-view-image img {
-    max-width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    height: auto;
-}
-
-/* Thông tin sản phẩm */
-.quick-view-info {
-    flex: 1;
-    padding: 15px;
-}
-
-/* Tên sản phẩm */
-.quick-view-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Mô tả ngắn */
-.quick-view-info p {
+.btn_start {
+    display: inline-flex;
+    border: 2px solid #fff;
+    padding: 12px 28px;
+    outline: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
     font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    text-decoration: none !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 1000px;
+    line-height: 16px;
 }
 
-/* Thông tin chi tiết */
-.quick-view-sku,
-.quick-view-categories,
-.quick-view-stock-status {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #444;
-}
-
-/* Giá sản phẩm */
-.quick-view-price {
+.btn_down_app {
+    display: inline-flex;
+    border: none;
+    padding: 16px 32px;
+    outline: none !important;
+    background: linear-gradient(90deg, rgba(0, 82, 255, 1) 0%, rgba(46, 199, 255, 1) 100%) !important;
+    color: #fff !important;
     font-size: 20px;
-    font-weight: bold;
-    color: #e74c3c;
-    margin: 15px 0;
+    text-decoration: none !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 12px;
+    line-height: 28px;
 }
 
-/* Nút chức năng */
-.quick-view-buttons a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 10px 5px 0;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    font-weight: bold;
-    text-align: center;
+.btn_see_more {
+    display: inline-flex;
+    border: none;
+    padding: 8px 20px;
+    outline: none !important;
+    background-color: $primary !important;
+    color: #fff !important;
+    font-size: 12px;
+    text-decoration: none !important;
+    font-weight: 600;
+    border-radius: 8px;
+    line-height: 16px;
 }
 
-/* Hiệu ứng hover */
-.quick-view-buttons a.button:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-}
+.btn_view_all {
+    display: inline-flex;
+    border: none;
+    padding: 0px 28px 0px 0px;
+    outline: none !important;
+    background-color: none !important;
+    color: $primary !important;
+    font-size: 16px;
+    text-decoration: none !important;
+    font-weight: 500;
+    line-height: 24px;
+    position: relative;
 
-/* Nút mua ngay */
-.quick-view-buttons a.buy-now {
-    background-color: #e67e22;
-}
-
-.quick-view-buttons a.buy-now:hover {
-    background-color: #d35400;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-    .quick-view-product {
-        flex-direction: column;
-    }
-
-    .quick-view-info {
-        padding: 10px;
-    }
-
-    .quick-view-buttons a.button {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
-/* Ẩn văn bản gốc của sao */
-.star {
-    font-size: 24px;
-    cursor: pointer;
-    color: #ccc;
-    line-height: 0.8;
-    transition: color 0.2s ease-in-out;
-}
-
-/* Khi hover vào sao thì đổi màu */
-.star:hover,
-.star:hover~.star {
-    color: #ffcc00;
-}
-
-/* Sao đã chọn sẽ có màu vàng */
-.star.selected {
-    color: #ffcc00;
-    /* Màu vàng khi đã đánh giá */
-}
-
-/* Hiệu ứng khi chọn sao */
-.star-rating {
-    display: inline-block;
-    direction: rtl;
-}
-
-.star-rating span {
-    display: inline-block;
-    transform: scaleX(-1);
-}
-
-#rating-toast {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    z-index: 1050;
-    min-width: 250px;
-}
-
-.ratingPost {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .ratingPost__showTotal {
-        display: none;
-        color: #fff;
-        font-size: 18px;
-        line-height: 14px;
-
-        span {
-            font-size: 10px !important;
-        }
-    }
-
-    .ratingPost__showAverage {
-        color: #666;
-        font-size: 24px;
-    }
-
-    .ratingPost__show {
-        background-color: #fff;
-        border: 1px dashed #777;
-        height: 60px;
-        width: 60px;
-        text-align: center;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s;
-
-        &:hover {
-            background-color: #555;
-
-            .ratingPost__showTotal {
-                display: block;
-            }
-
-            .ratingPost__showAverage {
-                display: none;
-            }
-        }
-    }
-
-    .ratingPost__text {
-        font-size: 12px;
-        color: #888;
-        line-height: 16px;
-        display: block;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        text-align: center;
-    }
-
-    .ratingPost__line {
-        display: flex;
-        column-gap: 80px;
-
-        .ratingPost__lineItem {
-            height: 1px;
-            border-bottom: 1px dashed #999;
-            width: 80px;
-        }
+    &::before {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.91003 20.4201L15.43 13.9001C16.2 13.1301 16.2 11.8701 15.43 11.1001L8.91003 4.58008' stroke='%230052FF' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
