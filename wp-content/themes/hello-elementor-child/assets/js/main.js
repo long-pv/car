@@ -40,5 +40,19 @@
 
 	adjustPadding();
 	$(window).resize(adjustPadding);
+
+	function swapPositions() {
+		$(".car_animation_block").each(function () {
+			let currentPos = $(this).attr("data-pos"); // Lấy vị trí hiện tại
+
+			// Xác định vị trí tiếp theo theo vòng tròn
+			let newPos = currentPos === "1" ? "2" : currentPos === "2" ? "3" : currentPos === "3" ? "4" : "1";
+
+			$(this).attr("data-pos", newPos); // Cập nhật data-pos
+		});
+	}
+
+	// Lặp lại hiệu ứng mỗi 3 giây
+	setInterval(swapPositions, 3000);
 	// ----- vucoder ------
 })(jQuery, window);

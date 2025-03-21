@@ -9,6 +9,8 @@ function register_custom_widgets($widgets_manager)
     require_once TEMPLATE_PATH . 'archive_posts.php';
     require_once TEMPLATE_PATH . 'slider_slick.php';
     require_once TEMPLATE_PATH . 'widget_table.php';
+    require_once TEMPLATE_PATH . 'Outstanding_Number_Widget.php';
+    require_once TEMPLATE_PATH . 'Short_Service_Widget.php';
 
     // Register widgets
     $widgets_manager->register(new \Header_Widget());
@@ -16,6 +18,8 @@ function register_custom_widgets($widgets_manager)
     $widgets_manager->register(new \Archive_Posts_Widget());
     $widgets_manager->register(new \Slider_Slick_Widget());
     $widgets_manager->register(new \Custom_Table_Widget());
+    $widgets_manager->register(new \Outstanding_Number_Widget());
+    $widgets_manager->register(new \Short_Service_Widget());
 }
 add_action('elementor/widgets/register', 'register_custom_widgets');
 

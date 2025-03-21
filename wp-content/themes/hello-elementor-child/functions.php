@@ -158,6 +158,7 @@ function disable_plugins_update($value)
 
 // include file function
 require CHILD_PATH . '/inc/custom_theme.php';
+require CHILD_PATH . '/inc/cpt_custom.php';
 
 // load widgets library by elementor
 function load_custom_widgets()
