@@ -132,6 +132,7 @@ function activate_my_plugins()
     $plugins = [
         'advanced-custom-fields-pro\acf.php',
         'elementor\elementor.php',
+        'pro-elements\pro-elements.php',
     ];
 
     foreach ($plugins as $plugin) {
