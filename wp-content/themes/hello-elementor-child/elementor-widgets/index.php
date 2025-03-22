@@ -32,6 +32,7 @@ function register_custom_widgets($widgets_manager)
     $widgets_manager->register(new \Show_Video_Widget());
     $widgets_manager->register(new \Latest_Article_Widget());
     $widgets_manager->register(new \Heartfelt_Service_Widget());
+    $widgets_manager->register(new \Departments_Widget());
     $widgets_manager->register(new \Ecosystem_Widget());
 }
 add_action('elementor/widgets/register', 'register_custom_widgets');
