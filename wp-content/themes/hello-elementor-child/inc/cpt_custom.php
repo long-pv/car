@@ -23,6 +23,13 @@ function register_cpt_post_types()
             'hierarchical' => false,
             'position' => false
         ],
+        'department' => [
+            'labels' => __('Departments', 'child_theme'),
+            'slug' => 'department',
+            'cap' => false,
+            'hierarchical' => false,
+            'position' => false
+        ],
     ];
 
     $cpt_tax = [

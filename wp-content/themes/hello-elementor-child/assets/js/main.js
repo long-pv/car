@@ -104,5 +104,20 @@
 	$(window).on("elementor/frontend/init", function () {
 		elementorFrontend.hooks.addAction("frontend/element_ready/partners_list_widget.default", Slider_Partners_List_Widget);
 	});
+
+	var Departments_Slider_Widget = function ($scope, $) {
+		$scope.find(".departments_list").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			dots: false,
+			arrows: true,
+		});
+	};
+
+	$(window).on("elementor/frontend/init", function () {
+		elementorFrontend.hooks.addAction("frontend/element_ready/departments_widget.default", Departments_Slider_Widget);
+	});
 	// ----- vucoder ------
 })(jQuery, window);
