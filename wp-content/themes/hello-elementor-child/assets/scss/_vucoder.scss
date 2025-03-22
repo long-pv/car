@@ -1,6 +1,5 @@
 /* Định dạng chung */
-.blog-item {
-}
+.blog-item {}
 
 .blog-item__image {
 	display: flex;
@@ -193,15 +192,20 @@
 /* Container chính */
 .banner-news {
 	position: relative;
+	height: 0px;
+	padding-bottom: 48%;
 	width: 100%;
 	min-height: 450px;
-	// overflow: hidden;
+	overflow: hidden;
 }
 
 /* Hình ảnh nền */
 .banner__image {
+	position: absolute;
 	width: 100%;
 	height: 100%;
+	left: 0px;
+	top: 0px;
 	object-fit: cover;
 }
 
@@ -230,11 +234,14 @@
 .banner__content::before {
 	content: "";
 	position: absolute;
-	top: 0px; /* Căn theo nội dung */
-	left: -24px; /* Đẩy ra ngoài */
+	top: 0px;
+	/* Căn theo nội dung */
+	left: -24px;
+	/* Đẩy ra ngoài */
 	width: 8px;
 	height: 100%;
-	background: #00bbff; /* Màu xanh */
+	background: #00bbff;
+	/* Màu xanh */
 }
 
 /* Tiêu đề */
