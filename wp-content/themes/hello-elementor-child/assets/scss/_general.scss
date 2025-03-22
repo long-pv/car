@@ -67,3 +67,18 @@ body {
 .line-3 {
     @include line-clamp(3);
 }
+
+.video {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+
+    iframe,
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
