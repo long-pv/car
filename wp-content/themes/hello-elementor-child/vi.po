@@ -1,0 +1,489 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hello Elementor Child\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-22 10:57+0000\n"
+"PO-Revision-Date: 2025-03-22 10:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: child_theme"
+
+#: elementor-widgets/template/archive_posts.php:74
+msgid "1 Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:79
+msgid "12 Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:75
+msgid "2 Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:76
+msgid "3 Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:77
+msgid "4 Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:78
+msgid "6 Columns"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:169
+msgid "Alternate Row Background"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:13
+msgid "Archive Posts"
+msgstr ""
+
+#: elementor-widgets/template/slider_slick.php:75
+msgid "Arrows"
+msgstr ""
+
+#. Name of the template
+#: page-blog.php:3
+msgid "Blog"
+msgstr ""
+
+#. Description of the theme
+msgid "Child theme of Hello Elementor"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:124
+msgid "Color"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:46
+#: elementor-widgets/template/widget_table.php:48
+msgid "Column Title"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:41
+msgid "Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:31
+#: elementor-widgets/template/Departments_Widget.php:31
+#: elementor-widgets/template/duplicate_widget.php:32
+#: elementor-widgets/template/header.php:32
+#: elementor-widgets/template/Outstanding_Number_Widget.php:31
+#: elementor-widgets/template/Partners_List_Widget.php:31
+#: elementor-widgets/template/Short_Service_Widget.php:36
+#: elementor-widgets/template/Show_Video_Widget.php:31
+#: elementor-widgets/template/slider_slick.php:32
+#: elementor-widgets/template/Staff_List_Widget.php:31
+#: elementor-widgets/template/template_file.php:32
+msgid "Content"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:77
+msgid "Content 1|Content 2|Content 3"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:136
+msgid "Content Text Color"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:150
+msgid "Content Typography"
+msgstr ""
+
+#: elementor-widgets/index.php:51
+msgid "Custom Builder"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:14
+msgid "Custom Table Widget"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:13
+msgid "Custom Widget"
+msgstr ""
+
+#: elementor-widgets/index.php:43
+msgid "Custom Widgets"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:59
+msgid "Công nghệ & Đổi mới"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:185
+msgid "Default content"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:43
+msgid "Default text"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:53
+msgid "Default textarea content"
+msgstr ""
+
+#: inc/cpt_custom.php:27
+msgid "Departments"
+msgstr ""
+
+#: elementor-widgets/template/Departments_Widget.php:13
+msgid "Departments Widget"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:67
+msgid "Description"
+msgstr ""
+
+#: elementor-widgets/template/slider_slick.php:93
+msgid "Dots"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:402
+msgid "Download PDF"
+msgstr ""
+
+#: elementor-widgets/template/duplicate_widget.php:14
+msgid "Duplicate Widget"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:183
+msgid "Editor Input"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:71
+msgid "Email Address"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:96
+msgid "Enable Option"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:93
+msgid "Enable Pagination"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:74
+msgid "Enter your email"
+msgstr ""
+
+#: elementor-widgets/template/Show_Video_Widget.php:52
+msgid "Enter YouTube video iframe"
+msgstr ""
+
+#: elementor-widgets/template/header.php:14
+msgid "Header"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:124
+msgid "Header Background Color"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:101
+msgid "Header Text Color"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:115
+msgid "Header Typography"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:18
+msgid "Heartfelt Service"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:36
+msgid "Heartfelt Services"
+msgstr ""
+
+#. Name of the theme
+msgid "Hello Elementor Child"
+msgstr ""
+
+#: elementor-widgets/template/slider_slick.php:78
+#: elementor-widgets/template/slider_slick.php:96
+msgid "Hide"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "http://longxemer.free.nf/"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:46
+#: elementor-widgets/template/slider_slick.php:45
+msgid "Image"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:170
+msgid "Item"
+msgstr ""
+
+#: elementor-widgets/template/Outstanding_Number_Widget.php:61
+msgid "Items"
+msgstr ""
+
+#: elementor-widgets/template/header.php:40
+msgid "Logo Image"
+msgstr ""
+
+#. Author of the theme
+msgid "Longpv"
+msgstr ""
+
+#: elementor-widgets/template/header.php:56
+#, php-format
+msgid "Manage your menus <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:134
+msgid "Media"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:180
+msgid "Next"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:96
+#: elementor-widgets/template/template_file.php:99
+#: elementor-widgets/template/template_file.php:196
+msgid "No"
+msgstr ""
+
+#: elementor-widgets/template/Departments_Widget.php:76
+msgid "No departments found."
+msgstr ""
+
+#: elementor-widgets/template/header.php:75
+msgid "No menus available"
+msgstr ""
+
+#: elementor-widgets/template/Outstanding_Number_Widget.php:41
+#: elementor-widgets/template/template_file.php:61
+msgid "Number"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:70
+msgid "Number of Columns"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:50
+msgid "Number of Posts"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:112
+msgid "Option 1"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:113
+msgid "Option 2"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:114
+msgid "Option 3"
+msgstr ""
+
+#: elementor-widgets/template/Outstanding_Number_Widget.php:13
+msgid "Outstanding Number"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:229
+msgid "Page"
+msgstr ""
+
+#: inc/cpt_custom.php:13
+msgid "Partner"
+msgstr ""
+
+#: elementor-widgets/template/Partners_List_Widget.php:13
+msgid "Partners List"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:228
+msgid "Post"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:179
+msgid "Prev"
+msgstr ""
+
+#: elementor-widgets/template/slider_slick.php:58
+msgid "Quantity"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:206
+msgid "Range"
+msgstr ""
+
+#: inc/cpt_custom.php:20
+msgid "Recruitment"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:165
+msgid "Repeater"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:172
+msgid "Repeater Item"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:75
+msgid "Row Content"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:70
+msgid "Rows"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:109
+msgid "Select"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:253
+msgid "Select Images"
+msgstr ""
+
+#: elementor-widgets/template/header.php:51
+msgid "Select Menu"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:240
+msgid "Select Post"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:40
+#: elementor-widgets/template/template_file.php:225
+msgid "Select Post Type"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:78
+msgid ""
+"Separate column content with a pipe (|). Example: Content 1|Content "
+"2|Content 3|..v..v.."
+msgstr ""
+
+#: elementor-widgets/template/Short_Service_Widget.php:46
+msgid "Service Icon"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:76
+msgid "Service Items"
+msgstr ""
+
+#: elementor-widgets/template/Short_Service_Widget.php:57
+msgid "Services"
+msgstr ""
+
+#: elementor-widgets/template/Short_Service_Widget.php:18
+msgid "Short Service"
+msgstr ""
+
+#: elementor-widgets/template/slider_slick.php:77
+#: elementor-widgets/template/slider_slick.php:95
+msgid "Show"
+msgstr ""
+
+#: elementor-widgets/template/Show_Video_Widget.php:13
+msgid "Show Video Widget"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:146
+msgid "Slider"
+msgstr ""
+
+#: elementor-widgets/template/slider_slick.php:40
+msgid "Slides"
+msgstr ""
+
+#: inc/cpt_custom.php:6
+msgid "Staff"
+msgstr ""
+
+#: elementor-widgets/template/Staff_List_Widget.php:13
+msgid "Staff List"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:160
+msgid "Table Border"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:33
+msgid "Table Columns"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:181
+msgid "Table Padding"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:62
+msgid "Table Rows"
+msgstr ""
+
+#: elementor-widgets/template/widget_table.php:92
+msgid "Table Style"
+msgstr ""
+
+#: elementor-widgets/template/Outstanding_Number_Widget.php:51
+msgid "Text"
+msgstr ""
+
+#: elementor-widgets/template/Outstanding_Number_Widget.php:53
+msgid "Text here"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:41
+msgid "Text Input"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:51
+msgid "Textarea"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:186
+msgid "There are no articles."
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:57
+msgid "Title"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:193
+msgid "Toggle"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:263
+msgid "Upload PDF File"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:83
+msgid "URL"
+msgstr ""
+
+#: elementor-widgets/template/Show_Video_Widget.php:39
+msgid "Video Thumbnail"
+msgstr ""
+
+#: elementor-widgets/template/archive_posts.php:95
+#: elementor-widgets/template/template_file.php:98
+#: elementor-widgets/template/template_file.php:195
+msgid "Yes"
+msgstr ""
+
+#: elementor-widgets/template/template_file.php:230
+msgid "Your Custom Post Type"
+msgstr ""
+
+#: elementor-widgets/template/Show_Video_Widget.php:50
+msgid "YouTube Video Iframe"
+msgstr ""
+
+#: elementor-widgets/template/Heartfelt_Service_Widget.php:69
+msgid "Ứng dụng công nghệ hiện đại..."
+msgstr ""
