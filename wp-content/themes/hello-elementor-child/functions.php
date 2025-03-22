@@ -157,7 +157,8 @@ function disable_plugins_update($value)
 }
 
 // include file function
-require CHILD_PATH . '/inc/custom_theme.php';
+require CHILD_PATH . '/inc/func_longpv.php';
+require CHILD_PATH . '/inc/func_vucoder.php';
 require CHILD_PATH . '/inc/cpt_custom.php';
 require CHILD_PATH . '/inc/video_popup.php';
 
