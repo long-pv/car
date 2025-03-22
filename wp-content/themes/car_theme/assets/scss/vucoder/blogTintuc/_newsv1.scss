@@ -1,0 +1,61 @@
+/* Định dạng chung */
+.news-item {
+	position: relative;
+	width: 360px;
+	border-radius: 16px;
+	overflow: hidden;
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+
+.news-item__image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.news-item__content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 16px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.news-item__title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.news-item__meta {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 14px;
+	opacity: 0.8;
+	margin-bottom: 12px;
+}
+
+.news-item__meta img {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+}
+
+.news-item__button {
+	display: inline-block;
+	padding: 8px 12px;
+	background: #007bff;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 6px;
+	transition: background 0.3s;
+}
+
+.news-item__button:hover {
+	background: #0056b3;
+}
