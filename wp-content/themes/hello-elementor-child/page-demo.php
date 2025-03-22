@@ -80,6 +80,58 @@ get_header();
 				</div>
 			</div>
 		</div>
+
+		<?php
+		$staffs = [
+			["name" => "Phạm Viết Thành", "position" => "CEO", "image" => "nhan_vien_1.png", "bio" => "Lorem Ipsum..."],
+			["name" => "Nguyễn Văn B", "position" => "CTO", "image" => "nhan_vien_2.png", "bio" => "Tech enthusiast..."],
+			["name" => "Trần Thị C", "position" => "CFO", "image" => "nhan_vien_3.png", "bio" => "Financial expert..."],
+			["name" => "Lê Văn D", "position" => "COO", "image" => "nhan_vien_4.png", "bio" => "Operations master..."],
+			["name" => "Đặng Thị E", "position" => "CMO", "image" => "nhan_vien_5.png", "bio" => "Marketing strategist..."]
+		];
+		?>
+
+
+		<div class="staff_slider">
+			<?php
+			$total_staffs = count($staffs);
+			for ($i = 0; $i < $total_staffs; $i += 4) {
+				echo '<div class="container"><div class="row">'; // Bootstrap Grid
+
+				// Hiển thị 4 nhân viên trên 1 slide
+				for ($j = $i; $j < $i + 4 && $j < $total_staffs; $j++) {
+			?>
+					<div class="col-md-6 mb-4"> <!-- 2 cột -->
+						<div class="staff_item d-flex align-items-center p-3 shadow-sm">
+							<img src="<?php echo CHILD_URI . '/assets/images/nhan_vien_1.png'; ?>"
+								alt="<?php echo $staffs[$j]['name']; ?>"
+								class="staff_img">
+							<div class="staff_info">
+								<h3 class="staff_name"><?php echo $staffs[$j]['name']; ?></h3>
+								<div class="staff_position"><?php echo $staffs[$j]['position']; ?></div>
+								<div class="staff_bio"><?php echo $staffs[$j]['bio']; ?></div>
+							</div>
+						</div>
+					</div>
+			<?php
+				}
+
+				echo '</div></div>'; // Đóng row và container của Bootstrap
+			}
+			?>
+		</div>
+
+
+		<div class="staff_item">
+			<img src="<?php echo CHILD_URI . '/assets/images/nhan_vien_1.png'; ?>" alt="Phạm Viết Thành">
+			<div class="staff_info">
+				<h3 class="staff_name">Phạm Viết Thành</h3>
+				<div class="staff_position">CEO</div>
+				<div class="staff_bio">
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <?php

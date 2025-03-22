@@ -54,5 +54,55 @@
 
 	// Lặp lại hiệu ứng mỗi 3 giây
 	setInterval(swapPositions, 3000);
+
+	var Slider_Staff_List_Widget = function ($scope, $) {
+		$scope.find(".staff_slider").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			dots: false,
+			arrows: true,
+		});
+	};
+
+	$(window).on("elementor/frontend/init", function () {
+		elementorFrontend.hooks.addAction("frontend/element_ready/staff_list_widget.default", Slider_Staff_List_Widget);
+	});
+
+	var Slider_Partners_List_Widget = function ($scope, $) {
+		$scope.find(".partners_slider").slick({
+			slidesToShow: 8,
+			slidesToScroll: 4,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			arrows: true,
+			dots: false,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+					},
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+					},
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+					},
+				},
+			],
+		});
+	};
+
+	$(window).on("elementor/frontend/init", function () {
+		elementorFrontend.hooks.addAction("frontend/element_ready/partners_list_widget.default", Slider_Partners_List_Widget);
+	});
 	// ----- vucoder ------
 })(jQuery, window);
