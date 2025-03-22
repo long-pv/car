@@ -1,189 +1,289 @@
 /* Định dạng chung */
-.blog-item {}
+.blog-item {
+}
 
 .blog-item__image {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 0px;
-    padding-bottom: 56.4%;
-    border-radius: 12px;
-    overflow: hidden;
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 56.4%;
+	border-radius: 12px;
+	overflow: hidden;
 }
 
 .blog-item__image img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .blog-item__content {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
 .blog-item__title {
-    display: flex;
-    text-decoration: none;
-    margin-bottom: 4px;
+	display: flex;
+	text-decoration: none;
+	margin-bottom: 4px;
 
-    h3 {
-        font-family: "Inter";
-        font-weight: 600;
-        font-size: 24px;
-        color: #15294b !important;
-        margin-bottom: 0px;
-    }
+	h3 {
+		font-family: "Inter";
+		font-weight: 600;
+		font-size: 24px;
+		color: #15294b !important;
+		margin-bottom: 0px;
+	}
 }
 
 .blog-item__meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .blog-item__category,
 .blog-item__date {
-    display: flex;
-    align-items: center;
-    gap: 2px;
+	display: flex;
+	align-items: center;
+	gap: 2px;
 
-    svg {
-        width: 24px;
-        height: 24px;
-        min-width: 24px;
-    }
+	svg {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
 
-    span {
-        font-family: "Inter";
-        font-weight: 400;
-        font-size: 12px;
-        color: #15294b;
-    }
+	span {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 12px;
+		color: #15294b;
+	}
 }
 
 .blog-item__desc {
-    font-family: "Inter";
-    font-weight: 400;
-    font-size: 14px;
-    color: #354764;
-    margin-bottom: 0px;
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 14px;
+	color: #354764;
+	margin-bottom: 0px;
 }
 
 .blog-item__button {
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background-color: #0052ff;
-    //
-    font-family: "Inter";
-    font-weight: 600;
-    font-size: 12px;
-    color: #ffffff;
-    text-decoration: none;
+	display: inline-block;
+	padding: 8px 12px;
+	border-radius: 8px;
+	background-color: #0052ff;
+	//
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 12px;
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .blog-item__button:hover {
-    color: #ffffff;
-    text-decoration: underline;
+	color: #ffffff;
+	text-decoration: underline;
 }
 
 /* Định dạng chung */
 .news-item {
-    display: flex;
-    position: relative;
-    height: 0px;
-    padding-bottom: 100%;
-    border-radius: 12px;
-    overflow: hidden;
+	display: flex;
+	position: relative;
+	height: 0px;
+	padding-bottom: 100%;
+	border-radius: 12px;
+	overflow: hidden;
 }
 
 .news-item::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.72%, #000000 100%);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.72%, #000000 100%);
 }
 
 .news-item__image {
-    position: absolute;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    top: 0px;
-    left: 0px;
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover;
+	top: 0px;
+	left: 0px;
 }
 
 .news-item__content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0px 21px 16px;
-    z-index: 10;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0px 21px 16px;
+	z-index: 10;
 }
 
 .news-item__title {
-    font-family: "Inter";
-    font-weight: 600 !important;
-    font-size: 16px !important;
-    color: #ffffff !important;
-    margin-bottom: 6px;
+	font-family: "Inter";
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	color: #ffffff !important;
+	margin-bottom: 6px;
 
-    @include line-clamp(2);
+	@include line-clamp(2);
 }
 
 .news-item__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .news-item__meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .news-item__category,
 .news-item__date {
-    display: flex;
-    align-items: center;
-    gap: 2px;
+	display: flex;
+	align-items: center;
+	gap: 2px;
 
-    svg {
-        width: 24px;
-        height: 24px;
-        min-width: 24px;
-    }
+	svg {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
 
-    span {
-        font-family: "Inter";
-        font-weight: 400;
-        font-size: 12px;
-        color: #ffffff;
-    }
+	span {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 12px;
+		color: #ffffff;
+	}
 }
 
 .news-item__button {
-    display: inline-block;
-    padding: 8px 20px;
-    border: none !important;
-    border-radius: 8px;
-    background-color: #0052ff !important;
-    font-family: "Inter";
-    font-weight: 600;
-    font-size: 12px;
-    color: #ffffff !important;
-    text-decoration: none !important;
+	display: inline-block;
+	padding: 8px 20px;
+	border: none !important;
+	border-radius: 8px;
+	background-color: #0052ff !important;
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 12px;
+	color: #ffffff !important;
+	text-decoration: none !important;
 }
 
 .news-item__button:hover {
-    color: #ffffff;
-    text-decoration: underline;
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+/* banner news */
+/* Container chính */
+.banner-news {
+	position: relative;
+	width: 100%;
+	min-height: 450px;
+	// overflow: hidden;
+}
+
+/* Hình ảnh nền */
+.banner__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Lớp overlay */
+.banner__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.74%, #000000 100%);
+}
+
+/* Nội dung */
+.banner__inner {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	padding-bottom: 57px;
+}
+
+.banner__content {
+	position: relative;
+}
+
+.banner__content::before {
+	content: "";
+	position: absolute;
+	top: 0px; /* Căn theo nội dung */
+	left: -24px; /* Đẩy ra ngoài */
+	width: 8px;
+	height: 100%;
+	background: #00bbff; /* Màu xanh */
+}
+
+/* Tiêu đề */
+.banner__title {
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 36px;
+	color: #ffffff;
+	//
+	margin-top: 0px;
+	margin-bottom: 18px;
+}
+
+/* Meta thông tin */
+.banner__meta {
+	padding-left: 24px;
+}
+
+.banner__date {
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+/* Share */
+.share {
+	display: flex;
+	flex-direction: column;
+	// justify-content: end;
+	align-items: end;
+	margin-bottom: 16px;
+}
+
+.share__title {
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.8);
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+.social_share_post {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	span {
+		display: flex;
+	}
 }
