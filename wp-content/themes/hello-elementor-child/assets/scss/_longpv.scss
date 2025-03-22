@@ -1,0 +1,142 @@
+/* Wrapper chính */
+.car_animation {
+    position: relative;
+    width: 369px;
+    height: 371px;
+}
+
+/* Các ô vuông */
+.car_animation_block {
+    position: absolute;
+    width: 176px;
+    height: 165px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    transition: all 0.5s ease-in-out;
+    padding: 16px;
+    gap: 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+/* Hover: Nổi bật hơn */
+.car_animation_block:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Vị trí ban đầu theo data-pos */
+.car_animation_block[data-pos="1"] {
+    top: 0px;
+    left: 0px;
+}
+
+.car_animation_block[data-pos="2"] {
+    top: 25px;
+    left: 192px;
+}
+
+.car_animation_block[data-pos="3"] {
+    top: 206px;
+    left: 192px;
+}
+
+.car_animation_block[data-pos="4"] {
+    top: 181px;
+    left: 0px;
+}
+
+/* Text */
+.car_animation_number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0052FF;
+}
+
+.car_animation_text {
+    font-size: 14px;
+    color: #354764;
+    font-weight: 500;
+}
+
+
+
+.short_service {
+    width: 257px;
+    height: 465px;
+    position: relative;
+}
+
+.short_service_box {
+    position: relative;
+    padding-left: 390px;
+
+    .short_service_img_center {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+    }
+}
+
+.short_service_item {
+    width: 142px;
+    height: 124px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+    transition: all 0.3s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+
+    img {
+        width: 74px;
+        height: auto;
+        object-fit: cover;
+        max-height: 100px;
+    }
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    &:nth-child(1) {
+        top: 0px;
+        left: 0px;
+    }
+
+    &:nth-child(2) {
+        top: 70px;
+        right: 0px;
+    }
+
+    &:nth-child(3) {
+        top: 137px;
+        left: 0px;
+    }
+
+    &:nth-child(4) {
+        top: 205px;
+        right: 0px;
+    }
+
+    &:nth-child(5) {
+        top: 273px;
+        left: 0px;
+    }
+
+    &:nth-child(6) {
+        top: 341px;
+        right: 0px;
+    }
+}
