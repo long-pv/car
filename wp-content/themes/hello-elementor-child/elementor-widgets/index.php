@@ -11,6 +11,8 @@ function register_custom_widgets($widgets_manager)
     require_once TEMPLATE_PATH . 'widget_table.php';
     require_once TEMPLATE_PATH . 'Outstanding_Number_Widget.php';
     require_once TEMPLATE_PATH . 'Short_Service_Widget.php';
+    require_once TEMPLATE_PATH . 'Staff_List_Widget.php';
+    require_once TEMPLATE_PATH . 'Partners_List_Widget.php';
 
     // Register widgets
     $widgets_manager->register(new \Header_Widget());
@@ -20,6 +22,8 @@ function register_custom_widgets($widgets_manager)
     $widgets_manager->register(new \Custom_Table_Widget());
     $widgets_manager->register(new \Outstanding_Number_Widget());
     $widgets_manager->register(new \Short_Service_Widget());
+    $widgets_manager->register(new \Staff_List_Widget());
+    $widgets_manager->register(new \Partners_List_Widget());
 }
 add_action('elementor/widgets/register', 'register_custom_widgets');
 
