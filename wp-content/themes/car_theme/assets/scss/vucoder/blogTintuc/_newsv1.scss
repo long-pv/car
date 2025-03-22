@@ -1,17 +1,28 @@
 /* Định dạng chung */
 .news-item {
+	display: block;
 	position: relative;
-	width: 360px;
-	border-radius: 16px;
+	height: 0px;
+	padding-bottom: 100%;
+	border-radius: 12px;
 	overflow: hidden;
-	color: #fff;
-	font-family: Arial, sans-serif;
 }
 
-.news-item__image img {
+.news-item::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	height: auto;
-	display: block;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.72%, #000000 100%);
+}
+
+.news-item__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .news-item__content {
@@ -19,43 +30,65 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 16px;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+	padding: 0px 21px 16px;
+	z-index: 10;
 }
 
 .news-item__title {
+	font-family: "Inter";
+	font-weight: 600;
 	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 8px;
+	color: #ffffff;
+	margin-bottom: 6px;
+}
+
+.news-item__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .news-item__meta {
 	display: flex;
 	align-items: center;
-	gap: 12px;
-	font-size: 14px;
-	opacity: 0.8;
-	margin-bottom: 12px;
+	gap: 8px;
 }
 
-.news-item__meta img {
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
+.news-item__category,
+.news-item__date {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+
+	svg {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
+
+	span {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 12px;
+		color: #ffffff;
+	}
 }
 
 .news-item__button {
 	display: inline-block;
-	padding: 8px 12px;
-	background: #007bff;
-	color: #fff;
+	padding: 8px 20px;
+	border: none;
+	border-radius: 8px;
+	background-color: #0052ff;
+	//
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 12px;
+	color: #ffffff;
 	text-decoration: none;
-	font-size: 14px;
-	font-weight: bold;
-	border-radius: 6px;
-	transition: background 0.3s;
 }
 
 .news-item__button:hover {
-	background: #0056b3;
+	color: #ffffff;
+	text-decoration: underline;
 }
