@@ -36,6 +36,44 @@ get_header();
 			Tiêu đề section
 		</div>
 
+		<div class="ecosystem">
+			<div class="ecosystem_item">
+				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<div class="ecosystem_title">
+					Cập Nhật & Đổi Mới Công Nghệ
+				</div>
+			</div>
+			<div class="ecosystem_item">
+				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<div class="ecosystem_title">
+					Cập Nhật & Đổi Mới Công Nghệ
+				</div>
+			</div>
+			<div class="ecosystem_item">
+				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<div class="ecosystem_title">
+					Cập Nhật & Đổi Mới Công Nghệ
+				</div>
+			</div>
+			<div class="ecosystem_item">
+				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<div class="ecosystem_title">
+					Kết Nối
+				</div>
+			</div>
+			<div class="ecosystem_item">
+				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
+				<div class="ecosystem_title">
+					Cập Nhật & Đổi Mới Công Nghệ
+				</div>
+			</div>
+		</div>
+
 
 		<div class="row">
 			<div class="col-md-4">
