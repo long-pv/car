@@ -37,6 +37,23 @@ get_header();
 		</div>
 
 
+		<div class="row">
+			<div class="col-md-4">
+				<div class="heartfelt_service">
+					<div class="heartfelt_service_inner">
+						<img src="your-image.jpg" alt="Heartfelt Service" class="img-fluid">
+					</div>
+					<div class="heartfelt_service_hover">
+						<div>
+							<h3 class="text-primary">Công nghệ & Đổi mới</h3>
+							<p>Ứng dụng công nghệ hiện đại trong xây dựng hệ sinh thái đa ứng dụng, phần mềm, liên tục cải tiến nhằm nâng cao chất lượng dịch vụ.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="car_animation">
 			<div class="car_animation_block" data-pos="1">
 				<div class="car_animation_number">27,000+</div>
