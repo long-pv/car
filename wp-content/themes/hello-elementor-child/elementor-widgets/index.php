@@ -14,6 +14,7 @@ function register_custom_widgets($widgets_manager)
     require_once TEMPLATE_PATH . 'Staff_List_Widget.php';
     require_once TEMPLATE_PATH . 'Partners_List_Widget.php';
     require_once TEMPLATE_PATH . 'Show_Video_Widget.php';
+    require_once TEMPLATE_PATH . 'Latest_Article_Widget.php';
 
     // Register widgets
     $widgets_manager->register(new \Header_Widget());
@@ -26,6 +27,7 @@ function register_custom_widgets($widgets_manager)
     $widgets_manager->register(new \Staff_List_Widget());
     $widgets_manager->register(new \Partners_List_Widget());
     $widgets_manager->register(new \Show_Video_Widget());
+    $widgets_manager->register(new \Latest_Article_Widget());
 }
 add_action('elementor/widgets/register', 'register_custom_widgets');
 
