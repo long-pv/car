@@ -157,6 +157,13 @@
     box-shadow: 0 10px 32px rgba(0, 48, 160, 0.16);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
     gap: 16px;
+    transform: scale(1);
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s;
+    }
 }
 
 .staff_item img {
@@ -358,6 +365,13 @@
     position: relative;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
     box-shadow: 0px 4px 10px rgba(0, 48, 160, 0.16);
+    transition: all 0.3s;
+    transform: scale(1);
+
+    &:hover {
+        transition: all 0.3s;
+        transform: scale(1.1);
+    }
 }
 
 .partner_content {
@@ -960,10 +974,35 @@
         img {
             width: 460px !important;
             height: auto !important;
+            transition: all 0.3s;
+            transform: scale(1);
+
+            &:hover {
+                transition: all 0.3s;
+                transform: scale(1.1);
+            }
         }
     }
 }
 
 .latest_articles_row {
     row-gap: 24px;
+}
+
+@keyframes buttonEffect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-btn {
+    animation: buttonEffect 2s ease-in-out;
 }

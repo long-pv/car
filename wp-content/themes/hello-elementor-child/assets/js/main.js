@@ -125,5 +125,33 @@
 			$("#header").removeClass("header_scrolled");
 		}
 	});
+
+	if (window.location.hash) {
+		scrollSmooth(window.location.hash);
+	}
+
+	function scrollSmooth(target) {
+		var targetElement = $(target);
+		if (targetElement.length > 0) {
+			$("html, body").animate(
+				{
+					scrollTop: targetElement.offset().top - $("#header").outerHeight(true),
+				},
+				1000
+			);
+		}
+	}
+
+	$(".click_url .elementor-button").click(function (event) {
+		event.preventDefault(); // Ngăn chặn hành vi mặc định
+		var link = $(this).attr("href"); // Lấy URL của nút
+		var btn = $(this);
+
+		btn.addClass("animate-btn"); // Thêm class để kích hoạt hiệu ứng
+
+		setTimeout(function () {
+			window.open(link, "_blank");
+		}, 2000);
+	});
 	// ----- vucoder ------
 })(jQuery, window);

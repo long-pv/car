@@ -137,9 +137,9 @@ class Eco_System_Banner_Widget extends \Elementor\Widget_Base
                         foreach (array_slice($settings['left_list'], 0, 3) as $item) :
                         ?>
                             <div class="short_service_item">
-                                <img class="icon" src="<?php echo esc_url($item['left_item_image']['url']); ?>" alt="Left Item">
+                                <img class="icon" src="<?php echo $item['left_item_image']['url']; ?>" alt="Left Item">
                                 <?php if ($item['left_item_link']['url']) : ?>
-                                    <a class="link" href="<?php echo esc_url($item['left_item_link']['url']); ?>"></a>
+                                    <a class="link" href="<?php echo $item['left_item_link']['url']; ?>"></a>
                                 <?php endif; ?>
                             </div>
                         <?php
@@ -156,9 +156,9 @@ class Eco_System_Banner_Widget extends \Elementor\Widget_Base
                         foreach (array_slice($settings['right_list'], 0, 4) as $item) :
                         ?>
                             <div class="short_service_item">
-                                <img class="icon" src="<?php echo esc_url($item['right_item_image']['url']); ?>" alt="Right Item">
+                                <img class="icon" src="<?php echo $item['right_item_image']['url']; ?>" alt="Right Item">
                                 <?php if ($item['right_item_link']['url']) : ?>
-                                    <a class="link" href="<?php echo esc_url($item['right_item_link']['url']); ?>"></a>
+                                    <a class="link" href="<?php echo $item['right_item_link']['url']; ?>"></a>
                                 <?php endif; ?>
                             </div>
                         <?php
