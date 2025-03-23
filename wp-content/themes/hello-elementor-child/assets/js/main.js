@@ -32,7 +32,7 @@
 
 	// wpadminbar
 	function adjustPadding() {
-		$("body").css("padding-top", $("#header").outerHeight(true));
+		// $("body").css("padding-top", $("#header").outerHeight(true));
 		if ($("#wpadminbar").length > 0) {
 			$(".header").css("margin-top", $("#wpadminbar").outerHeight(true));
 		}
@@ -82,19 +82,15 @@
 				{
 					breakpoint: 1024,
 					settings: {
-						slidesToShow: 3,
+						slidesToShow: 4,
+						slidesToScroll: 1,
 					},
 				},
 				{
 					breakpoint: 768,
 					settings: {
 						slidesToShow: 2,
-					},
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 1,
+						slidesToScroll: 1,
 					},
 				},
 			],
@@ -118,6 +114,16 @@
 
 	$(window).on("elementor/frontend/init", function () {
 		elementorFrontend.hooks.addAction("frontend/element_ready/departments_widget.default", Departments_Slider_Widget);
+	});
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 80) {
+			if (!$("#header").hasClass("header_dark")) {
+				$("#header").addClass("header_scrolled");
+			}
+		} else {
+			$("#header").removeClass("header_scrolled");
+		}
 	});
 	// ----- vucoder ------
 })(jQuery, window);

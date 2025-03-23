@@ -90,7 +90,7 @@ class Heartfelt_Service_Widget extends Widget_Base
 ?>
         <div class="row heartfelt_service_row">
             <?php foreach ($settings['services'] as $service) : ?>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="heartfelt_service">
                         <div class="heartfelt_service_inner">
                             <img src="<?php echo esc_url($service['image']['url']); ?>" alt="<?php echo esc_attr($service['title']); ?>">

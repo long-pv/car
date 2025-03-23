@@ -80,7 +80,7 @@ class Staff_List_Widget extends \Elementor\Widget_Base
                     <div class="staff_slide">
                         <div class="row staff_slider_row">
                             <?php foreach ($staff_group as $staff) : ?>
-                                <div class="col-md-6">
+                                <div class="col-lg-6">
                                     <div class="staff_item">
                                         <img src="<?php echo esc_url($staff['image']); ?>" alt="<?php echo esc_attr($staff['name']); ?>">
                                         <div class="staff_info">

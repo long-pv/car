@@ -41,10 +41,10 @@ class Latest_Article_Widget extends Widget_Base
 
         if ($query->have_posts()) {
             echo '<div class="latest_articles">';
-            echo '<div class="row">';
+            echo '<div class="row latest_articles_row">';
             while ($query->have_posts()) {
                 $query->the_post();
-                echo '<div class="col-lg-4">';
+                echo '<div class="col-md-6 col-lg-4">';
                 get_template_part('template-parts/single_post');
                 echo '</div>';
             }
