@@ -28,10 +28,14 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="footer_title">
-                            Thông tin liên hệ
+                            <?php echo LANG == 'en' ? 'Contact Information' : 'Thông tin liên hệ'; ?>
                         </div>
                         <?php
-                        $contact_information = get_field('contact_information', 'option') ?? null;
+                        if (LANG == 'en') {
+                            $contact_information = get_field('contact_information_en', 'option') ?? null;
+                        } else {
+                            $contact_information = get_field('contact_information', 'option') ?? null;
+                        }
                         $phone = $contact_information['phone'] ?? '';
                         $mail = $contact_information['mail'] ?? '';
                         $address = $contact_information['address'] ?? '';
@@ -95,7 +99,11 @@
                     </div>
                     <div class="col-lg-4">
                         <?php
-                        $social_network = get_field('social_network', 'option') ?? null;
+                        if (LANG == 'en') {
+                            $social_network = get_field('social_network_en', 'option') ?? null;
+                        } else {
+                            $social_network = get_field('social_network', 'option') ?? null;
+                        }
                         $facebook = $social_network['facebook'] ?? '';
                         $youtube = $social_network['youtube'] ?? '';
                         $tiktok = $social_network['tiktok'] ?? '';
@@ -155,7 +163,11 @@
     <div class="footer_bottom">
         <div class="container">
             <?php
-            $policy_page = get_field('policy_page', 'option') ?? [];
+            if (LANG == 'en') {
+                $policy_page = get_field('policy_page', 'option') ?? [];
+            } else {
+                $policy_page = get_field('policy_page', 'option') ?? [];
+            }
 
             if (!empty($policy_page) && is_array($policy_page)) {
                 $links = [];
@@ -176,7 +188,11 @@
             ?>
 
             <?php
-            $copyright = get_field('copyright', 'option') ?? null;
+            if (LANG == 'en') {
+                $copyright = get_field('copyright_en', 'option') ?? null;
+            } else {
+                $copyright = get_field('copyright', 'option') ?? null;
+            }
             if ($copyright):
             ?>
                 <div class="copyright">

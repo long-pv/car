@@ -36,7 +36,9 @@ get_header();
 
         <div class="share">
             <div class="share__inner">
-                <h2 class="share__title">Chia sẻ ngay</h2>
+                <h2 class="share__title">
+                    <?php echo LANG == 'en' ? 'Share now' : ' Chia sẻ ngay'; ?>
+                </h2>
                 <?php
                 $share_link = get_permalink();
                 ?>
@@ -105,7 +107,7 @@ get_header();
 <div class="related_news">
     <div class="container">
         <h2 class="related_news_title">
-            TIN TỨC LIÊN QUAN
+            <?php echo LANG == 'en' ? 'RELATED NEWS' : 'TIN TỨC LIÊN QUAN'; ?>
         </h2>
         <?php
         $query_args = [

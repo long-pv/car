@@ -31,7 +31,7 @@
                  </div>
              </div>
              <button class="news-item__button">
-                 Xem ngay
+                 <?php echo LANG == 'en' ? 'Read now' : 'Xem ngay'; ?>
              </button>
          </div>
      </div>
