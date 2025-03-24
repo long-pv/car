@@ -126,6 +126,15 @@
 		}
 	});
 
+	$("a").on("click", function (event) {
+		var target = $(this).attr("href");
+		// Kiểm tra nếu href là một anchor link (bắt đầu bằng #)
+		if (target.startsWith("#")) {
+			event.preventDefault();
+			scrollSmooth(target);
+		}
+	});
+
 	if (window.location.hash) {
 		scrollSmooth(window.location.hash);
 	}
@@ -135,7 +144,7 @@
 		if (targetElement.length > 0) {
 			$("html, body").animate(
 				{
-					scrollTop: targetElement.offset().top - $("#header").outerHeight(true),
+					scrollTop: targetElement.offset().top - 150,
 				},
 				1000
 			);
