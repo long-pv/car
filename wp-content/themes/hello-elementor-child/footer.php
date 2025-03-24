@@ -164,7 +164,7 @@
         <div class="container">
             <?php
             if (LANG == 'en') {
-                $policy_page = get_field('policy_page', 'option') ?? [];
+                $policy_page = get_field('policy_page_en', 'option') ?? [];
             } else {
                 $policy_page = get_field('policy_page', 'option') ?? [];
             }
