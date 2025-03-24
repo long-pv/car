@@ -6,6 +6,11 @@ if (!defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
 }
 
+/**
+ * get currernt lang.
+ */
+define('LANG', function_exists('pll_current_language') ? pll_current_language('slug') : 'vi');
+
 // turn on auto update core wp
 // define('WP_AUTO_UPDATE_CORE', true); // Bật cập nhật tự động WordPress
 // define('AUTOMATIC_UPDATER_DISABLED', false); // Đảm bảo cập nhật tự động không bị tắt
