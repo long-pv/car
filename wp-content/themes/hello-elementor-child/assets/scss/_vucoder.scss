@@ -1,3 +1,10 @@
+/* */
+.content__inner {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
 /* Định dạng chung */
 .blog-item {
 }
@@ -35,6 +42,7 @@
 		font-weight: 600;
 		font-size: 24px;
 		color: #15294b !important;
+		margin-top: 0px;
 		margin-bottom: 0px;
 	}
 }
@@ -91,27 +99,27 @@
 	text-decoration: underline;
 }
 
-/* Định dạng chung */
-.news-item {
+/* Post Item */
+.post-item {
 	display: flex;
 	position: relative;
 	height: 0px;
-	padding-bottom: 100%;
+	padding-bottom: 56.2%;
 	border-radius: 12px;
 	overflow: hidden;
 }
 
-.news-item::after {
+.post-item::after {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.72%, #000000 100%);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 47.57%, #000000 100%);
 }
 
-.news-item__image {
+.post-item__image {
 	position: absolute;
 	width: 100% !important;
 	height: 100% !important;
@@ -120,39 +128,41 @@
 	left: 0px;
 }
 
-.news-item__content {
+.post-item__content {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 0px 21px 16px;
+	padding: 24px;
 	z-index: 10;
 }
 
-.news-item__title {
+.post-item__title {
 	font-family: "Inter";
 	font-weight: 600 !important;
-	font-size: 16px !important;
+	font-size: 24px !important;
 	color: #ffffff !important;
+	margin-top: 0px;
 	margin-bottom: 6px;
 
 	@include line-clamp(2);
 }
 
-.news-item__info {
+.post-item__info {
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
 	align-items: center;
+	gap: 24px;
 }
 
-.news-item__meta {
+.post-item__meta {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 }
 
-.news-item__category,
-.news-item__date {
+.post-item__category,
+.post-item__date {
 	display: flex;
 	align-items: center;
 	gap: 2px;
@@ -171,7 +181,7 @@
 	}
 }
 
-.news-item__button {
+.post-item__button {
 	display: inline-block;
 	padding: 8px 20px;
 	border: none !important;
@@ -184,7 +194,117 @@
 	text-decoration: none !important;
 }
 
-.news-item__button:hover {
+.post-item__button:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+/* Định dạng chung */
+.highlight-news__title {
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 24px;
+	text-transform: uppercase;
+	//
+	color: #15294b;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+.highlight-news-item {
+	display: flex;
+	position: relative;
+	height: 0px;
+	padding-bottom: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.highlight-news-item::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.72%, #000000 100%);
+}
+
+.highlight-news-item__image {
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover;
+	top: 0px;
+	left: 0px;
+}
+
+.highlight-news-item__content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0px 21px 16px;
+	z-index: 10;
+}
+
+.highlight-news-item__title {
+	font-family: "Inter";
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	color: #ffffff !important;
+	margin-top: 0px;
+	margin-bottom: 6px;
+
+	@include line-clamp(2);
+}
+
+.highlight-news-item__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.highlight-news-item__meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.highlight-news-item__category,
+.highlight-news-item__date {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+
+	svg {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
+
+	span {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 12px;
+		color: #ffffff;
+	}
+}
+
+.highlight-news-item__button {
+	display: inline-block;
+	padding: 8px 20px;
+	border: none !important;
+	border-radius: 8px;
+	background-color: #0052ff !important;
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 12px;
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+.highlight-news-item__button:hover {
 	color: #ffffff;
 	text-decoration: underline;
 }
@@ -285,5 +405,136 @@
 
 	span {
 		display: flex;
+	}
+}
+
+//
+.tabs {
+	display: flex;
+	gap: 13px; /* Khoảng cách giữa các tab */
+	justify-content: center;
+	align-items: center;
+}
+
+.tabs__item {
+	padding: 16px;
+	border-radius: 999px; /* Bo góc lớn */
+	box-shadow: 0px 8px 16px -4px rgba(0, 48, 160, 0.18);
+	text-decoration: none;
+	//
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 14px;
+	color: #354764;
+}
+
+.tabs__item--active {
+	font-family: "Inter";
+	font-weight: 700;
+	font-size: 14px;
+	//
+	color: #ffffff !important;
+	background: #0052ff;
+}
+
+.tabs__item:hover {
+	// color: #ffffff;
+}
+
+//
+.related-news__subtitle {
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 24px;
+	//
+	color: #15294b;
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+.related-news__inner {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+/* Related News */
+.related-news {
+	display: flex;
+	position: relative;
+	height: 0px;
+	padding-bottom: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.related-news::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.72%, #000000 100%);
+}
+
+.related-news__image {
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover;
+	top: 0px;
+	left: 0px;
+}
+
+.related-news__content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0px 24px 16px;
+	z-index: 10;
+}
+
+.related-news__title {
+	font-family: "Inter";
+	font-weight: 600 !important;
+	font-size: 14px !important;
+	color: #ffffff !important;
+	margin-bottom: 6px;
+
+	@include line-clamp(2);
+}
+
+.related-news__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.related-news__meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.related-news__category,
+.related-news__date {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+
+	svg {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
+
+	span {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 12px;
+		color: #ffffff;
 	}
 }
