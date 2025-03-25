@@ -26,7 +26,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-5">
                         <div class="footer_title">
                             <?php echo LANG == 'en' ? 'Contact Information' : 'Thông tin liên hệ'; ?>
                         </div>
@@ -97,7 +97,7 @@
                         }
                         ?>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <?php
                         if (LANG == 'en') {
                             $social_network = get_field('social_network_en', 'option') ?? null;

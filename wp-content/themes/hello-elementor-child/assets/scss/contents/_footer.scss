@@ -87,6 +87,10 @@
         display: flex;
         gap: 16px;
 
+        @media (min-width: 1024px) {
+            justify-content: space-between;
+        }
+
         .footer_mxh_item {
             display: inline-flex;
         }

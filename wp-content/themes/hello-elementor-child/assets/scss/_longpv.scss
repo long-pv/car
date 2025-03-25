@@ -169,9 +169,10 @@
 .staff_item img {
     width: 127px !important;
     height: 127px !important;
-    border-radius: 50%;
+    border-radius: 50% !important;
     object-fit: cover;
     flex-shrink: 0;
+    overflow: hidden;
 
     @media (max-width: 767px) {
         width: 60px !important;
@@ -384,6 +385,7 @@
     align-items: center;
     width: 100%;
     padding: 8px;
+    gap: 8px;
 }
 
 .partner_logo img {
