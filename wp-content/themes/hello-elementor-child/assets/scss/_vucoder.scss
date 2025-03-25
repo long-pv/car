@@ -365,7 +365,7 @@
 
 	&:hover {
 		transition: all 0.3s;
-		background-color: #3745AF !important;
+		background-color: #3745af !important;
 	}
 }
 
@@ -622,4 +622,32 @@
 	text-align: center;
 	//
 	color: #15294b;
+}
+
+/* Điều khoản Page */
+.page_title {
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	//
+	color: #15294b;
+	//
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+.page_inner {
+	padding-top: 70px;
+	padding-bottom: 120px;
+}
+
+.page_content {
+	.editor {
+		font-size: 16px !important;
+		color: #354764 !important;
+
+		// đã đưa các phần chung vào _editor.scss để dùng
+	}
 }

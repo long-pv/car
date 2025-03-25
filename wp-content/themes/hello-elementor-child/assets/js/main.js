@@ -32,7 +32,9 @@
 
 	// wpadminbar
 	function adjustPadding() {
-		// $("body").css("padding-top", $("#header").outerHeight(true));
+		if ($(".page_inner").length > 0) {
+			$("body").css("padding-top", $("#header").outerHeight(true));
+		}
 		if ($("#wpadminbar").length > 0) {
 			$(".header").css("margin-top", $("#wpadminbar").outerHeight(true));
 		}
