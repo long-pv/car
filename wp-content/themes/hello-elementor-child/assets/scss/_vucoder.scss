@@ -5,7 +5,38 @@
 	gap: 24px;
 }
 
-/* Định dạng chung */
+/* Blog Item */
+.news-banner {
+	padding: 215px 0px 235px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.news-banner__title {
+	font-family: "Inter";
+	font-weight: 700;
+	font-size: 96px;
+	text-align: center;
+	//
+	color: #ffffff;
+	text-transform: uppercase;
+	//
+	margin-top: 0px;
+	margin-bottom: 12px;
+}
+
+.news-banner__desc {
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 20px;
+	text-align: center;
+	//
+	color: #ffffff;
+	//
+	margin-bottom: 0px;
+}
+
 .blog-item {
 }
 
@@ -563,4 +594,14 @@
 		font-size: 12px;
 		color: #ffffff;
 	}
+}
+
+/*  */
+.car-knowledge__title {
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 40px;
+	text-align: center;
+	//
+	color: #15294b;
 }
