@@ -162,14 +162,18 @@
 			window.open(link, "_blank");
 		}, 2000);
 	});
+
+	$('select[name="job_location"]').on("change", function () {
+		$(this).removeClass("select_placeholder");
+	});
 	// ----- vucoder ------
 	//
 	//
 	//
 	//
 	// ----- longbn ------
-	// 
-	// 
-	// 
-	// 
+	//
+	//
+	//
+	//
 })(jQuery, window);
