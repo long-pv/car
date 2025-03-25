@@ -6,7 +6,12 @@
     -moz-box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.16);
     position: fixed;
     top: 0px;
-    background-color: $info;
+    left: 0px;
+    background-color: rgba(0, 37, 115, 0.4);
+
+    &.header_scrolled {
+        background-color: #002573 !important;
+    }
 
     &__inner {
         padding: 8px 0px;
@@ -377,4 +382,14 @@
     position: absolute;
     right: 0px;
     top: 0px;
+}
+
+.header_right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header_search_link {
+    display: inline-flex;
 }

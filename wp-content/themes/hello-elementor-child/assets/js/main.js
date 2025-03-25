@@ -32,7 +32,7 @@
 
 	// wpadminbar
 	function adjustPadding() {
-		$("body").css("padding-top", $("#header").outerHeight(true));
+		// $("body").css("padding-top", $("#header").outerHeight(true));
 		if ($("#wpadminbar").length > 0) {
 			$(".header").css("margin-top", $("#wpadminbar").outerHeight(true));
 		}
@@ -82,19 +82,15 @@
 				{
 					breakpoint: 1024,
 					settings: {
-						slidesToShow: 3,
+						slidesToShow: 4,
+						slidesToScroll: 1,
 					},
 				},
 				{
 					breakpoint: 768,
 					settings: {
 						slidesToShow: 2,
-					},
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 1,
+						slidesToScroll: 1,
 					},
 				},
 			],
@@ -118,6 +114,53 @@
 
 	$(window).on("elementor/frontend/init", function () {
 		elementorFrontend.hooks.addAction("frontend/element_ready/departments_widget.default", Departments_Slider_Widget);
+	});
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 80) {
+			if (!$("#header").hasClass("header_dark")) {
+				$("#header").addClass("header_scrolled");
+			}
+		} else {
+			$("#header").removeClass("header_scrolled");
+		}
+	});
+
+	$("a").on("click", function (event) {
+		var target = $(this).attr("href");
+		// Kiểm tra nếu href là một anchor link (bắt đầu bằng #)
+		if (target.startsWith("#")) {
+			event.preventDefault();
+			scrollSmooth(target);
+		}
+	});
+
+	if (window.location.hash) {
+		scrollSmooth(window.location.hash);
+	}
+
+	function scrollSmooth(target) {
+		var targetElement = $(target);
+		if (targetElement.length > 0) {
+			$("html, body").animate(
+				{
+					scrollTop: targetElement.offset().top - 150,
+				},
+				1000
+			);
+		}
+	}
+
+	$(".click_url .elementor-button").click(function (event) {
+		event.preventDefault(); // Ngăn chặn hành vi mặc định
+		var link = $(this).attr("href"); // Lấy URL của nút
+		var btn = $(this);
+
+		btn.addClass("animate-btn"); // Thêm class để kích hoạt hiệu ứng
+
+		setTimeout(function () {
+			window.open(link, "_blank");
+		}, 2000);
 	});
 	// ----- vucoder ------
 })(jQuery, window);

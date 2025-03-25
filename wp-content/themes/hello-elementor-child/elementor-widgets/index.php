@@ -17,6 +17,8 @@ function register_custom_widgets($widgets_manager)
     require_once TEMPLATE_PATH . 'Latest_Article_Widget.php';
     require_once TEMPLATE_PATH . 'Heartfelt_Service_Widget.php';
     require_once TEMPLATE_PATH . 'Departments_Widget.php';
+    require_once TEMPLATE_PATH . 'Ecosystem_Widget.php';
+    require_once TEMPLATE_PATH . 'Eco_System_Banner_Widget.php';
 
     // Register widgets
     $widgets_manager->register(new \Header_Widget());
@@ -32,6 +34,8 @@ function register_custom_widgets($widgets_manager)
     $widgets_manager->register(new \Latest_Article_Widget());
     $widgets_manager->register(new \Heartfelt_Service_Widget());
     $widgets_manager->register(new \Departments_Widget());
+    $widgets_manager->register(new \Ecosystem_Widget());
+    $widgets_manager->register(new \Eco_System_Banner_Widget());
 }
 add_action('elementor/widgets/register', 'register_custom_widgets');
 

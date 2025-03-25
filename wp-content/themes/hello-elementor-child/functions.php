@@ -6,6 +6,11 @@ if (!defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
 }
 
+/**
+ * get currernt lang.
+ */
+define('LANG', function_exists('pll_current_language') ? pll_current_language('slug') : 'vi');
+
 // turn on auto update core wp
 // define('WP_AUTO_UPDATE_CORE', true); // Bật cập nhật tự động WordPress
 // define('AUTOMATIC_UPDATER_DISABLED', false); // Đảm bảo cập nhật tự động không bị tắt
@@ -21,6 +26,12 @@ if (!defined('_S_VERSION')) {
 // define('DISALLOW_FILE_MODS', true); // Ngăn chỉnh sửa file từ Admin
 // define('DISALLOW_FILE_EDIT', true); // Tắt trình chỉnh sửa file trong Dashboard
 // add_filter('auto_update_plugin', '__return_false'); // Ngăn cập nhật tự động plugin
+
+function register_my_menus()
+{
+    register_nav_menu('menu-footer', __('Menu Footer'));
+}
+add_action('after_setup_theme', 'register_my_menus');
 
 /**
  * Enqueue scripts and styles.
@@ -161,6 +172,7 @@ require CHILD_PATH . '/inc/func_longpv.php';
 require CHILD_PATH . '/inc/func_vucoder.php';
 require CHILD_PATH . '/inc/cpt_custom.php';
 require CHILD_PATH . '/inc/video_popup.php';
+require CHILD_PATH . '/inc/polylang.php';
 
 // load widgets library by elementor
 function load_custom_widgets()
