@@ -168,6 +168,31 @@
 	$('select[name="job_location"]').on("change", function () {
 		$(this).removeClass("select_placeholder");
 	});
+
+	$(".accordion_job_header").click(function () {
+		$(".accordion_job_content").slideUp();
+		$(".accordion_job_toggle").text(function () {
+			return $(this).data("open");
+		});
+
+		var content = $(this).closest(".accordion_job_item").find(".accordion_job_content");
+		var toggle = $(this).find(".accordion_job_toggle");
+
+		if (!content.is(":visible")) {
+			content.slideDown();
+			toggle.text(toggle.data("close"));
+		}
+	});
+
+	let items = $(".accordion_job_item");
+	if (items.length < 4) {
+		$(".show_all_job").hide();
+	}
+
+	$(".show_all_job").on("click", function () {
+		$(".accordion_job_item.d-none").removeClass("d-none");
+		$(this).hide();
+	});
 	// ----- vucoder ------
 	//
 	//

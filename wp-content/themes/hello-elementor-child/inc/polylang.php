@@ -2,7 +2,7 @@
 function polylang_dropdown_scripts()
 {
     if (function_exists('pll_the_languages')) {
-        wp_enqueue_script('basetheme-script-switch_lang', CHILD_URI . '/assets/js/polylang_dropdown.js', array(), _S_VERSION, true);
+        wp_enqueue_script('dev_theme-script-switch_lang', CHILD_URI . '/assets/js/polylang_dropdown.js', array('jquery'), _S_VERSION, true);
     }
 }
 add_action('wp_enqueue_scripts', 'polylang_dropdown_scripts');
