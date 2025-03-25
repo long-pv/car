@@ -16,178 +16,108 @@
 
 get_header();
 ?>
-<div class="secSpace" style="background-color: #c0c0c0;">
+<div class="pb-5" style="background-color: #c0c0c0;padding-top:150px;">
 	<div class="container">
-		<h2>Button</h2>
-		<a href="#" class="btn_start">
-			Xem thêm
-		</a>
-		<a href="#" class="btn_down_app">
-			Xem thêm
-		</a>
-		<a href="#" class="btn_see_more">
-			Xem thêm
-		</a>
-		<a href="#" class="btn_view_all">
-			Xem thêm
-		</a>
-
-		<div class="sec_title">
-			Tiêu đề section
-		</div>
-
-		<div class="ecosystem">
-			<div class="ecosystem_item">
-				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<div class="ecosystem_title">
-					Cập Nhật & Đổi Mới Công Nghệ
-				</div>
-			</div>
-			<div class="ecosystem_item">
-				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<div class="ecosystem_title">
-					Cập Nhật & Đổi Mới Công Nghệ
-				</div>
-			</div>
-			<div class="ecosystem_item">
-				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<div class="ecosystem_title">
-					Cập Nhật & Đổi Mới Công Nghệ
-				</div>
-			</div>
-			<div class="ecosystem_item">
-				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<div class="ecosystem_title">
-					Kết Nối
-				</div>
-			</div>
-			<div class="ecosystem_item">
-				<img class="ecosystem_item_img" src="<?php echo CHILD_URI . '/assets/images/luc_giac_1.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<img class="ecosystem_item_img_hover" src="<?php echo CHILD_URI . '/assets/images/luc_giac_2.svg'; ?>" alt="Cập Nhật & Đổi Mới Công Nghệ">
-				<div class="ecosystem_title">
-					Cập Nhật & Đổi Mới Công Nghệ
-				</div>
-			</div>
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-4">
-				<div class="heartfelt_service">
-					<div class="heartfelt_service_inner">
-						<img src="your-image.jpg" alt="Heartfelt Service" class="img-fluid">
-					</div>
-					<div class="heartfelt_service_hover">
-						<div>
-							<h3 class="text-primary">Công nghệ & Đổi mới</h3>
-							<p>Ứng dụng công nghệ hiện đại trong xây dựng hệ sinh thái đa ứng dụng, phần mềm, liên tục cải tiến nhằm nâng cao chất lượng dịch vụ.</p>
+		<form class="search_job" id="search_job" method="GET">
+			<div class="search_job_inner">
+				<div class="row align-items-center">
+					<div class="col position-relative">
+						<div class="search_input_wrapper">
+							<input type="text" class="search_input form-control" placeholder="Nhập vị trí công việc...">
+							<span class="search_icon">🔍</span>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="car_animation">
-			<div class="car_animation_block" data-pos="1">
-				<div class="car_animation_number">27,000+</div>
-				<div class="car_animation_text">Khách hàng</div>
-			</div>
-			<div class="car_animation_block" data-pos="2">
-				<div class="car_animation_number">1,000+</div>
-				<div class="car_animation_text">Đại diện kinh doanh</div>
-			</div>
-			<div class="car_animation_block" data-pos="3">
-				<div class="car_animation_number">2,500+</div>
-				<div class="car_animation_text">Điểm cung cấp dịch vụ</div>
-			</div>
-			<div class="car_animation_block" data-pos="4">
-				<div class="car_animation_number">160+</div>
-				<div class="car_animation_text">Điểm kinh doanh</div>
-			</div>
-		</div>
-
-		<div class="short_service_box">
-			<img class="short_service_img_center" src="<?php echo CHILD_URI . '/assets/images/center_service.png'; ?>" alt="DriverPlus">
-
-			<div class="short_service">
-				<div class="short_service_item">
-					<img src="<?php echo CHILD_URI . '/assets/images/car_1.png'; ?>" class="short_service_icon" alt="DriverPlus">
-				</div>
-				<div class="short_service_item">
-					<img src="<?php echo CHILD_URI . '/assets/images/car_1.png'; ?>" class="short_service_icon" alt="DriverPlus">
-				</div>
-				<div class="short_service_item">
-					<img src="<?php echo CHILD_URI . '/assets/images/car_1.png'; ?>" class="short_service_icon" alt="DriverPlus">
-				</div>
-				<div class="short_service_item">
-					<img src="<?php echo CHILD_URI . '/assets/images/car_1.png'; ?>" class="short_service_icon" alt="DriverPlus">
-				</div>
-				<div class="short_service_item">
-					<img src="<?php echo CHILD_URI . '/assets/images/car_1.png'; ?>" class="short_service_icon" alt="DriverPlus">
-				</div>
-				<div class="short_service_item">
-					<img src="<?php echo CHILD_URI . '/assets/images/car_1.png'; ?>" class="short_service_icon" alt="DriverPlus">
-				</div>
-			</div>
-		</div>
-
-		<?php
-		$staffs = [
-			["name" => "Phạm Viết Thành", "position" => "CEO", "image" => "nhan_vien_1.png", "bio" => "Lorem Ipsum..."],
-			["name" => "Nguyễn Văn B", "position" => "CTO", "image" => "nhan_vien_2.png", "bio" => "Tech enthusiast..."],
-			["name" => "Trần Thị C", "position" => "CFO", "image" => "nhan_vien_3.png", "bio" => "Financial expert..."],
-			["name" => "Lê Văn D", "position" => "COO", "image" => "nhan_vien_4.png", "bio" => "Operations master..."],
-			["name" => "Đặng Thị E", "position" => "CMO", "image" => "nhan_vien_5.png", "bio" => "Marketing strategist..."]
-		];
-		?>
-
-
-		<div class="staff_slider">
-			<?php
-			$total_staffs = count($staffs);
-			for ($i = 0; $i < $total_staffs; $i += 4) {
-				echo '<div class="container"><div class="row">'; // Bootstrap Grid
-
-				// Hiển thị 4 nhân viên trên 1 slide
-				for ($j = $i; $j < $i + 4 && $j < $total_staffs; $j++) {
-			?>
-					<div class="col-md-6 mb-4"> <!-- 2 cột -->
-						<div class="staff_item d-flex align-items-center p-3 shadow-sm">
-							<img src="<?php echo CHILD_URI . '/assets/images/nhan_vien_1.png'; ?>"
-								alt="<?php echo $staffs[$j]['name']; ?>"
-								class="staff_img">
-							<div class="staff_info">
-								<h3 class="staff_name"><?php echo $staffs[$j]['name']; ?></h3>
-								<div class="staff_position"><?php echo $staffs[$j]['position']; ?></div>
-								<div class="staff_bio"><?php echo $staffs[$j]['bio']; ?></div>
-							</div>
+					<div class="col-auto position-relative">
+						<div class="search_location_wrapper">
+							<span class="search_location_icon">📍</span>
+							<select class="search_location form-select custom_select">
+								<option selected>Chọn nơi làm việc</option>
+								<option value="hanoi">Hà Nội</option>
+								<option value="hochiminh">Hồ Chí Minh</option>
+								<option value="danang">Đà Nẵng</option>
+							</select>
+							<span class="dropdown_icon">▼</span>
 						</div>
 					</div>
-			<?php
-				}
+					<div class="col-auto">
+						<button class="search_button btn btn-primary" type="submit">Tìm kiếm</button>
+					</div>
+				</div>
+			</div>
+		</form>
 
-				echo '</div></div>'; // Đóng row và container của Bootstrap
+		<style>
+			.search_job {
+				border: 2px solid #dcdcdc;
+				border-radius: 50px;
+				padding: 10px 20px;
+				background: #fff;
+				max-width: 800px;
+				margin: auto;
 			}
-			?>
-		</div>
 
+			.search_job_inner {
+				width: 100%;
+			}
 
-		<div class="staff_item">
-			<img src="<?php echo CHILD_URI . '/assets/images/nhan_vien_1.png'; ?>" alt="Phạm Viết Thành">
-			<div class="staff_info">
-				<h3 class="staff_name">Phạm Viết Thành</h3>
-				<div class="staff_position">CEO</div>
-				<div class="staff_bio">
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-				</div>
-			</div>
-		</div>
+			.search_input_wrapper {
+				position: relative;
+			}
+
+			.search_input {
+				padding-right: 35px;
+			}
+
+			.search_icon {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: #666;
+				font-size: 18px;
+			}
+
+			.search_location_wrapper {
+				position: relative;
+				display: flex;
+				align-items: center;
+			}
+
+			.search_location_icon {
+				position: absolute;
+				left: 10px;
+				color: #666;
+			}
+
+			.custom_select {
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				padding-left: 30px;
+				padding-right: 30px;
+				cursor: pointer;
+			}
+
+			.dropdown_icon {
+				position: absolute;
+				right: 10px;
+				color: #666;
+				pointer-events: none;
+			}
+
+			.search_button {
+				border-radius: 50px;
+				font-weight: bold;
+				transition: background 0.3s;
+				padding: 8px 15px;
+			}
+
+			.search_button:hover {
+				background: #0052cc;
+			}
+		</style>
 	</div>
 </div>
+
 <?php
 get_footer();

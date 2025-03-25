@@ -33,12 +33,12 @@ function register_cpt_post_types()
     ];
 
     $cpt_tax = [
-        // 'event_category' => [
-        //     'labels' => __('Event category', 'child_theme'),
-        //     'slug' => 'danh-muc-su-kien',
-        //     'cap' => false,
-        //     'post_type' => ['event']
-        // ],
+        'location' => [
+            'labels' => __('Location', 'child_theme'),
+            'slug' => 'location',
+            'cap' => false,
+            'post_type' => ['recruitment']
+        ],
     ];
 
     foreach ($cpt_list as $post_type => $data) {
