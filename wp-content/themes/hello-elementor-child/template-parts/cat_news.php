@@ -96,7 +96,7 @@ $news_posts = get_posts([
                                                 </p>
                                                 <div class="blog-item__button_wrap">
                                                     <a href="<?php echo $link; ?>" class="blog-item__button">
-                                                        Xem ngay
+                                                        <?php echo LANG == 'en' ? 'Read now' : 'Xem ngay'; ?>
                                                     </a>
                                                 </div>
                                             </div>
@@ -314,7 +314,7 @@ if ($featured_news) {
                                                                 stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                                         </svg>
                                                         <span>
-                                                            Xe hay
+                                                            <?php echo $category->name; ?>
                                                         </span>
                                                     </div>
                                                     <div class="highlight-news-item__date">
