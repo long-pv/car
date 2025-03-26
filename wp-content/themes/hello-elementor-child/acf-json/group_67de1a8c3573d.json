@@ -75,6 +75,13 @@
                 "operator": "==",
                 "value": "staff"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "staff_about_us"
+            }
         ]
     ],
     "menu_order": -10,
@@ -92,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742609176
+    "modified": 1742968877
 }

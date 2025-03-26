@@ -651,3 +651,135 @@
 		// đã đưa các phần chung vào _editor.scss để dùng
 	}
 }
+/* Search */
+.search__secSpace {
+	padding-top: 150px;
+	padding-bottom: 36px;
+}
+
+.search__header {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 12px;
+	//
+	margin-bottom: 12px;
+}
+
+.search__title {
+	// font-family: "Inter";
+	font-weight: 600;
+	font-size: 32px;
+	text-transform: uppercase;
+	//
+	color: #354764;
+	//
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.search__result {
+	display: flex;
+	// font-family: "Inter";
+	font-weight: 400;
+	font-size: 16px;
+	//
+	color: #5d6b82;
+	//
+	margin-bottom: 16px;
+}
+
+.search__line {
+	border: 1px solid #b3b9c4;
+}
+
+.search-news {
+	padding-top: 48px;
+	padding-bottom: 12px;
+}
+
+.search-news__gap {
+	row-gap: 32px;
+}
+
+/* Search News Item */
+.search-news-item {
+}
+
+.search-news-item__image {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.search-news-item__image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.search-news-item__content {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.search-news-item__title {
+	display: flex;
+	text-decoration: none;
+
+	h3 {
+		// font-family: "Inter";
+		font-weight: 600;
+		font-size: 24px;
+		color: #15294b !important;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
+
+.search-news-item__desc {
+	// font-family: "Inter";
+	font-weight: 400;
+	font-size: 16px;
+	color: #5d6b82;
+	margin-bottom: 0px;
+}
+
+/* Pagination Custom */
+.pagination--custom {
+	justify-content: center !important;
+	gap: 8px !important;
+	margin: 0px !important;
+
+	.page-numbers {
+		padding: 10px;
+		border-radius: 4px;
+		border: 1px solid #b3b9c4;
+		//
+		// font-family: "Inter";
+		font-weight: 400;
+		font-size: 16px;
+		text-align: center;
+		//
+		color: #354764;
+	}
+
+	.current {
+		// font-family: "Inter";
+		font-weight: 700;
+		font-size: 16px;
+		text-align: center;
+		//
+		color: #ffffff;
+		//
+		background-color: #0052ff;
+		//
+		border: 1px solid #ffffff;
+	}
+}
