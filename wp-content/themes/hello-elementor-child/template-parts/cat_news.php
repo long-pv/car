@@ -22,6 +22,7 @@ $news_posts = get_posts([
                             $publish_date = get_the_date('d/m/Y', $post_id);
                             $excerpt = get_the_excerpt($post_id);
                             $arr_post[] = $post_id->ID;
+                            $categories = get_the_category($post_id);
                         ?>
                             <!-- Blog Item -->
                             <?php if ($index % 2 != 1): ?>
@@ -53,7 +54,7 @@ $news_posts = get_posts([
                                                                     stroke-linejoin="round" />
                                                             </svg>
                                                             <span>
-                                                                <?php echo $category->name; ?>
+                                                                <?php echo $categories[0]->name; ?>
                                                             </span>
                                                         </div>
                                                         <div class="blog-item__date">
@@ -198,6 +199,7 @@ $news_posts = get_posts([
                         while ($query_post->have_posts()) {
                             $query_post->the_post();
                             $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                            $categories = get_the_category(get_the_ID());
                     ?>
                             <a href="<?php echo get_permalink(); ?>" class="related-news">
                                 <img class="related-news__image" src="<?php echo  $thumbnail_url; ?>" alt="<?php the_title(); ?>">
@@ -218,7 +220,7 @@ $news_posts = get_posts([
                                                         stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                                 <span>
-                                                    <?php echo $category->name; ?>
+                                                    <?php echo $categories[0]->name; ?>
                                                 </span>
                                             </div>
                                             <div class="related-news__date">
@@ -293,6 +295,7 @@ if ($featured_news) {
                         while ($query->have_posts()) {
                             $query->the_post();
                             $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                            $categories = get_the_category($post_id);
                         ?>
                             <div>
                                 <div class="tin_noi_bat_item">
@@ -314,7 +317,7 @@ if ($featured_news) {
                                                                 stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                                         </svg>
                                                         <span>
-                                                            <?php echo $category->name; ?>
+                                                            <?php echo $categories[0]->name; ?>
                                                         </span>
                                                     </div>
                                                     <div class="highlight-news-item__date">

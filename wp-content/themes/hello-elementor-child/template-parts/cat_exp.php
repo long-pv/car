@@ -28,6 +28,7 @@ $recent_posts = get_posts([
                         $publish_date = get_the_date('d/m/Y', $post_id);
                         $excerpt = get_the_excerpt($post_id);
                         $arr_post[] = $post->ID;
+                        $categories = get_the_category($post_id);
                     ?>
                         <div class="col-lg-3 col-md-6">
                             <a href="<?php echo get_permalink($post_id); ?>" class="related-news">
@@ -48,7 +49,7 @@ $recent_posts = get_posts([
                                                         stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                                 <span>
-                                                    <?php echo $category->name; ?>
+                                                    <?php echo $categories[0]->name; ?>
                                                 </span>
                                             </div>
                                             <div class="related-news__date">
@@ -99,6 +100,7 @@ $recent_posts = get_posts([
                         $publish_date = get_the_date('d/m/Y', $post_id);
                         $excerpt = get_the_excerpt($post_id);
                         $arr_post[] = $post->ID;
+                        $categories = get_the_category($post_id);
                     ?>
                         <div class="col-lg-4">
                             <a href="<?php echo get_permalink($post_id); ?>" class="highlight-news-item">
@@ -119,7 +121,7 @@ $recent_posts = get_posts([
                                                         stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                                 <span>
-                                                    <?php echo $current_category->name; ?>
+                                                    <?php echo $categories[0]->name; ?>
                                                 </span>
                                             </div>
                                             <div class="highlight-news-item__date">
@@ -183,25 +185,26 @@ if ($featured_news) :
 
     if ($query->have_posts()) {
 ?>
-        <div class="secSpace">
+        <div class="tin_lien_quan_exp">
             <div class="container">
                 <h2 class="highlight-news__title">
                     <?php echo LANG == 'en' ? 'FEATURED NEWS' : 'Tin Nổi bật'; ?>
                 </h2>
 
                 <div class="row">
-                    <?php foreach ($featured_news as $post_id):
-                        $post_title = get_the_title($post_id);
-                        $post_url = get_permalink($post_id);
-                        $post_thumbnail = get_the_post_thumbnail_url($post_id, 'medium') ?: get_stylesheet_directory_uri() . '/assets/images/no_image.jpg';
-                        $post_date = get_the_date('d/m/Y', $post_id);
-                        $categories = get_the_category($post_id);
+                    <?php
+                    while ($query->have_posts()) {
+                        $query->the_post();
+                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                        $categories = get_the_category(get_the_ID());
                     ?>
-                        <div class="col-lg-3">
-                            <a href="<?php echo $post_url ?>" class="related-news">
-                                <img class="related-news__image" src="<?php echo $post_thumbnail; ?>" alt="<?php echo $post_title; ?>">
+                        <div class="col-md-6 col-lg-3">
+                            <a href="<?php echo get_permalink(); ?>" class="related-news">
+                                <img class="related-news__image" src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>">
                                 <div class="related-news__content">
-                                    <h3 class="related-news__title"><?php echo $post_title; ?></h3>
+                                    <h3 class="related-news__title">
+                                        <?php the_title(); ?>
+                                    </h3>
                                     <div class="related-news__info">
                                         <div class="related-news__meta">
                                             <div class="related-news__category">
@@ -214,7 +217,7 @@ if ($featured_news) :
                                                         stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                                 <span>
-                                                    <?php echo $categories[0]->name ?>
+                                                    <?php echo $categories[0]->name; ?>
                                                 </span>
                                             </div>
                                             <div class="related-news__date">
@@ -243,14 +246,18 @@ if ($featured_news) :
                                                     <path d="M9.52938 15.1334H9.53537" stroke="white" stroke-linecap="round"
                                                         stroke-linejoin="round" />
                                                 </svg>
-                                                <span><?php echo $post_date; ?></span>
+                                                <span>
+                                                    <?php echo get_the_date('d/m/Y'); ?>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    <?php endforeach; ?>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
