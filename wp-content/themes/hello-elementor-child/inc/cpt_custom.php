@@ -9,6 +9,13 @@ function register_cpt_post_types()
             'hierarchical' => false,
             'position' => false
         ],
+        'staff_about_us' => [
+            'labels' => __('Staff (About us)', 'child_theme'),
+            'slug' => 'staff_about_us',
+            'cap' => false,
+            'hierarchical' => false,
+            'position' => false
+        ],
         'partner' => [
             'labels' => __('Partner', 'child_theme'),
             'slug' => 'partner',
