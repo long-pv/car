@@ -70,6 +70,7 @@
 
 	$(window).on("elementor/frontend/init", function () {
 		elementorFrontend.hooks.addAction("frontend/element_ready/staff_list_widget.default", Slider_Staff_List_Widget);
+		elementorFrontend.hooks.addAction("frontend/element_ready/staff_about_widget.default", Slider_Staff_List_Widget);
 	});
 
 	var Slider_Partners_List_Widget = function ($scope, $) {
@@ -192,6 +193,29 @@
 	$(".show_all_job").on("click", function () {
 		$(".accordion_job_item.d-none").removeClass("d-none");
 		$(this).hide();
+	});
+
+	$(".tin_noi_bat_slider").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	});
 	// ----- vucoder ------
 	//

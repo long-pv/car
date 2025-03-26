@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_67e22214e5afd",
-            "label": "select style",
+            "label": "Select style",
             "name": "select_style",
             "aria-label": "",
             "type": "radio",
@@ -24,7 +24,7 @@
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "layout": "vertical",
+            "layout": "horizontal",
             "save_other_choice": 0
         }
     ],
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742874003
+    "modified": 1742999780
 }

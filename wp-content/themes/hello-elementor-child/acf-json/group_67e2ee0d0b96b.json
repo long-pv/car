@@ -1,6 +1,6 @@
 {
     "key": "group_67e2ee0d0b96b",
-    "title": "Banner",
+    "title": "Banner category",
     "fields": [
         {
             "key": "field_67e2ee0d6f651",
@@ -104,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742925559
+    "modified": 1743000002
 }
