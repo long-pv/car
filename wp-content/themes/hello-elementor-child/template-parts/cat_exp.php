@@ -102,7 +102,7 @@ $recent_posts = get_posts([
                         $arr_post[] = $post->ID;
                         $categories = get_the_category($post_id);
                     ?>
-                        <div class="col-lg-4">
+                        <div class="col-md-6 col-lg-4">
                             <a href="<?php echo get_permalink($post_id); ?>" class="highlight-news-item">
                                 <img class="highlight-news-item__image" src="<?php echo $thumbnail_url; ?>" alt="<?php echo  $title; ?>">
                                 <div class="highlight-news-item__content">
