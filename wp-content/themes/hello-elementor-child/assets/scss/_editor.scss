@@ -52,17 +52,10 @@
         text-decoration: underline !important;
         transition: all 0.3s;
         white-space: inherit;
-        color: $color_primary !important;
     }
 
     ul {
         padding-left: 24px;
-
-        li {
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
     }
 
     iframe {

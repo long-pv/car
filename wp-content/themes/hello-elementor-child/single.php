@@ -5,8 +5,13 @@ get_header();
 <!-- viết html ở đây -->
 <div class="banner-news">
     <div class="banner__overlay"></div>
-    <img src="<?php echo CHILD_URI . "/assets/images/Banner-news.png"; ?>"
-        alt="Xe Jaecoo J7 PHEV" class="banner__image" />
+    <?php
+    $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+    if (!$thumbnail_url) {
+        $thumbnail_url = CHILD_URI . "/assets/images/Banner-news.png";
+    }
+    ?>
+    <img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>" class="banner__image" />
 
     <div class="banner__inner">
         <div class="container">
@@ -15,7 +20,7 @@ get_header();
                     <div class="banner__content">
                         <h1 class="banner__title"><?php the_title(); ?></h1>
                         <ul class="banner__meta">
-                            <li class="banner__date">27/12/2024 | 19:41</li>
+                            <li class="banner__date"><?php echo get_the_date('d/m/Y'); ?> | <?php echo get_the_time('H:i'); ?></li>
                         </ul>
                     </div>
                 </div>
