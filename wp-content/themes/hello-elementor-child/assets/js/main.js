@@ -129,7 +129,7 @@
 		}
 	});
 
-	$("a").on("click", function (event) {
+	$(document).on("click", "a", function (event) {
 		var target = $(this).attr("href");
 		// Kiểm tra nếu href là một anchor link (bắt đầu bằng #)
 		if (target.startsWith("#")) {
@@ -149,7 +149,7 @@
 				{
 					scrollTop: targetElement.offset().top - 150,
 				},
-				1000
+				500
 			);
 		}
 	}

@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="col-lg-8">
-                <div class="row">
+                <div class="row footer_row_menu">
                     <div class="col-lg-5">
                         <div class="footer_title">
                             <?php echo LANG == 'en' ? 'Contact Information' : 'Thông tin liên hệ'; ?>

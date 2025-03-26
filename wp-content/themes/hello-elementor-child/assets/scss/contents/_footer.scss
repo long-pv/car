@@ -126,4 +126,10 @@
         font-size: 14px;
         text-align: center;
     }
+
+    .footer_row_menu {
+        @media (min-width: 1024px) {
+            --bs-gutter-x: 48px;
+        }
+    }
 }
