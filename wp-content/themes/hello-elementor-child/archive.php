@@ -45,14 +45,19 @@ if ($banner_image) :
 <?php
 else:
 	echo '<div class="py-5"></div>';
-endif; 
+endif;
 ?>
 <!-- end banner -->
 
 <!-- tab category -->
 <?php
 $select_style = get_field("select_style", "category_" . $category_id); // Lấy ACF field
-$blog_news_tabs = get_field('blog_news_tabs', 'option') ?? [];
+if (LANG == 'en') {
+	// blog_news_tabs_en
+	$blog_news_tabs = get_field('blog_news_tabs_en', 'option') ?? [];
+} else {
+	$blog_news_tabs = get_field('blog_news_tabs', 'option') ?? [];
+}
 if ($blog_news_tabs):
 ?>
 	<section class="secSpace blogNews-tabs">
