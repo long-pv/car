@@ -217,6 +217,40 @@
 			},
 		],
 	});
+
+	$(".header_search_link").on("click", function (event) {
+		event.stopPropagation(); // Ngăn chặn sự kiện lan lên document
+		$(".quick_result").toggle();
+	});
+
+	$(document).on("click", function (event) {
+		if (!$(event.target).closest(".quick_result, .header_search_link").length) {
+			$(".quick_result").hide();
+		}
+	});
+
+	$('.box_search input[name="s"]').on("keyup", function () {
+		let searchQuery = $(this).val();
+
+		if (searchQuery.length > 2) {
+			$.ajax({
+				type: "POST",
+				url: ajax_url,
+				data: {
+					action: "ajax_search",
+					search: searchQuery,
+				},
+				beforeSend: function () {
+					$(".ket_qua").html("");
+				},
+				success: function (response) {
+					$(".ket_qua").html(response);
+				},
+			});
+		} else {
+			$(".ket_qua").html("");
+		}
+	});
 	// ----- vucoder ------
 	//
 	//

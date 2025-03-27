@@ -20,6 +20,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<script>
+		var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,26 +62,13 @@
 								switch_lang();
 								?>
 
-								<a class="header_search_link" href="<?php echo home_url('/?s='); ?>">
+								<a class="header_search_link" href="javascript:void(0);">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 										<path d="M22 22L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</a>
 							</div>
-
-
-							<!-- <div class="header__search">
-								<form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-									<input type="text" name="s" placeholder="Search..." value="<?php echo get_search_query(); ?>" />
-									<button type="submit">
-										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M9.58317 17.5C13.9554 17.5 17.4998 13.9556 17.4998 9.58333C17.4998 5.21108 13.9554 1.66667 9.58317 1.66667C5.21092 1.66667 1.6665 5.21108 1.6665 9.58333C1.6665 13.9556 5.21092 17.5 9.58317 17.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-											<path d="M18.3332 18.3333L16.6665 16.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</button>
-								</form>
-							</div> -->
 
 							<!-- button toggle menu mobile -->
 							<div class="header__toggle">
@@ -105,6 +96,24 @@
 				);
 			}
 			?>
+		</div>
+
+		<div class="quick_result">
+			<div class="container">
+				<form class="box_search" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+					<span class="icon"></span>
+					<input type="text" name="s" placeholder="<?php echo LANG == 'en' ? 'Search on CarDoctor' : 'Tìm kiếm trên Cardoctor'; ?>" value="<?php echo get_search_query(); ?>" />
+				</form>
+
+				<div class="ket_qua_box">
+					<div class="title">
+						<?php echo LANG == 'en' ? 'Quick search' : 'Tìm kiếm nhanh'; ?>
+					</div>
+
+					<div class="ket_qua">
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
