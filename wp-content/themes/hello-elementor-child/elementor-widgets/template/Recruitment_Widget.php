@@ -66,17 +66,17 @@ class Recruitment_Widget extends \Elementor\Widget_Base
         <form class="search_job" id="search_job" method="GET">
             <div class="search_job_inner">
                 <div class="row search_job_row align-items-center">
-                    <div class="col position-relative">
+                    <div class="col-12 col-md position-relative">
                         <div class="search_input_wrapper">
                             <input type="text" name="job_title" class="search_input form-control"
                                 placeholder="Nhập vị trí công việc..." value="<?php echo esc_attr($job_title); ?>">
                             <span class="search_icon"></span>
                         </div>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-12 col-md-auto d-none d-md-block">
                         <div class="search_job_line"></div>
                     </div>
-                    <div class="col-4 position-relative">
+                    <div class="col-12 col-md-4 position-relative">
                         <div class="search_location_wrapper">
                             <span class="search_location_icon"></span>
                             <select name="job_location" class="search_location <?php echo !empty($job_location) ? '' : "select_placeholder"; ?>">
@@ -93,8 +93,8 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                             <span class="dropdown_icon"></span>
                         </div>
                     </div>
-                    <div class="col-auto">
-                        <button class="search_button" type="submit">Tìm kiếm</button>
+                    <div class="col-12 col-md-auto">
+                        <button class="search_button w-100 w-md-auto" type="submit">Tìm kiếm</button>
                     </div>
                 </div>
             </div>

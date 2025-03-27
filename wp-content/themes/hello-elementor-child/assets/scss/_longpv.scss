@@ -1081,6 +1081,10 @@
     -webkit-box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.16);
     padding: 32px;
+
+    @media (max-width: 1024px) {
+        padding: 16px;
+    }
 }
 
 .accordion_job_header {
@@ -1090,7 +1094,8 @@
 
 .accordion_job_content {
     display: none;
-    padding: 10px;
+    padding: 0px;
+
 }
 
 .accordion_job_header_top {
@@ -1100,6 +1105,11 @@
     gap: 16px;
     padding-bottom: 22px;
     border-bottom: 1px solid #C2C7D0;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .accordion_job_title {
@@ -1108,6 +1118,10 @@
     line-height: 1;
     font-weight: 600 !important;
     color: #15294B !important;
+
+    @media (max-width: 1024px) {
+        font-size: 28px !important;
+    }
 }
 
 .accordion_job_toggle {
@@ -1123,6 +1137,7 @@
     justify-content: space-between;
     gap: 16px;
     padding-top: 24px;
+    flex-wrap: wrap;
 }
 
 .accordion_job_address {
@@ -1169,6 +1184,11 @@
     padding: 12px 24px;
     background: #fff;
     margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+        border-radius: 16px;
+        padding: 24px 12px;
+    }
 }
 
 .search_job_line {
@@ -1179,6 +1199,7 @@
 
 .search_job_row {
     --bs-gutter-x: 32px;
+    row-gap: 16px;
 }
 
 .search_job_inner {
