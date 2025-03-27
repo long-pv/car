@@ -69,7 +69,7 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                     <div class="col-12 col-md position-relative">
                         <div class="search_input_wrapper">
                             <input type="text" name="job_title" class="search_input form-control"
-                                placeholder="Nhập vị trí công việc..." value="<?php echo esc_attr($job_title); ?>">
+                                placeholder="<?php echo LANG == 'en' ? 'Enter job location' : 'Nhập vị trí công việc'; ?>" value="<?php echo esc_attr($job_title); ?>">
                             <span class="search_icon"></span>
                         </div>
                     </div>
@@ -80,7 +80,9 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                         <div class="search_location_wrapper">
                             <span class="search_location_icon"></span>
                             <select name="job_location" class="search_location <?php echo !empty($job_location) ? '' : "select_placeholder"; ?>">
-                                <option value="">Chọn nơi làm việc</option>
+                                <option value="">
+                                    <?php echo LANG == 'en' ? 'Choose workplace' : 'Chọn nơi làm việc'; ?>
+                                </option>
                                 <?php if (!empty($locations) && !is_wp_error($locations)) : ?>
                                     <?php foreach ($locations as $location) : ?>
                                         <option value="<?php echo esc_attr($location->slug); ?>"
@@ -94,7 +96,9 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                         </div>
                     </div>
                     <div class="col-12 col-md-auto">
-                        <button class="search_button w-100 w-md-auto" type="submit">Tìm kiếm</button>
+                        <button class="search_button w-100 w-md-auto" type="submit">
+                            <?php echo LANG == 'en' ? 'Search Job' : 'Tìm kiếm'; ?>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -114,8 +118,8 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                                 <h3 class="accordion_job_title">
                                     <?php the_title() ?>
                                 </h3>
-                                <div class="accordion_job_toggle" data-open="Xem chi tiết" data-close="Thu gọn">
-                                    Xem chi tiết
+                                <div class="accordion_job_toggle" data-open="<?php echo LANG == 'en' ? 'See Detail' : 'Xem chi tiết'; ?>" data-close="<?php echo LANG == 'en' ? 'Collapse' : 'Thu gọn'; ?>">
+                                    <?php echo LANG == 'en' ? 'See Detail' : 'Xem chi tiết'; ?>
                                 </div>
                             </div>
                             <div class="accordion_job_header_bottom">
@@ -148,14 +152,14 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                         </div>
                         <div class="accordion_job_content">
                             <div class="accordion_job_content_title">
-                                Mô tả công việc
+                                <?php echo LANG == 'en' ? 'Job description' : 'Mô tả công việc'; ?>
                             </div>
                             <div class="accordion_job_content_editor editor">
                                 <?php echo get_field('job_description'); ?>
                             </div>
                             <div class="accordion_job_btn_wrap">
                                 <button type="button" class="accordion_job_btn">
-                                    Ứng tuyển
+                                    <?php echo LANG == 'en' ? 'Apply' : 'Ứng tuyển'; ?>
                                 </button>
                             </div>
                         </div>
@@ -164,7 +168,7 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                     $index++;
                 };
             } else {
-                echo 'Không có bài viết nào phù hợp.';
+                echo LANG == 'en' ? 'There are no matching articles.' : 'Không có bài viết nào phù hợp.';
             }
             ?>
         </div>
@@ -172,7 +176,7 @@ class Recruitment_Widget extends \Elementor\Widget_Base
         <div class="show_all_job_btn">
             <div class="show_all_job">
                 <div class="text">
-                    Xem thêm công việc khác
+                    <?php echo LANG == 'en' ? 'View more career opportunities' : 'Xem thêm công việc khác'; ?>
                 </div>
                 <div class="icon">
                 </div>

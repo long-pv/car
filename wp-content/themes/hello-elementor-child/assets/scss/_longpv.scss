@@ -159,6 +159,7 @@
     gap: 16px;
     transform: scale(1);
     transition: all 0.3s;
+    height: 100%;
 
     &:hover {
         transform: scale(1.05);
@@ -203,7 +204,7 @@
 .staff_bio {
     font-size: 16px;
     color: #354764;
-    @include line-clamp(3);
+    // @include line-clamp(3);
 }
 
 .staff_slider_row {
