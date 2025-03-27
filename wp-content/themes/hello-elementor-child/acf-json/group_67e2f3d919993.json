@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_67e2f3d995c3b",
-            "label": "",
+            "label": "Tabs news (VN)",
             "name": "blog_news_tabs",
             "aria-label": "",
             "type": "repeater",
@@ -51,6 +51,56 @@
                     "parent_repeater": "field_67e2f3d995c3b"
                 }
             ]
+        },
+        {
+            "key": "field_67e435941de37",
+            "label": "Tabs news (EN)",
+            "name": "blog_news_tabs_en",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 4,
+            "collapsed": "field_67e2f47c95c3c",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67e435941de39",
+                    "label": "Category",
+                    "name": "category",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_67e435941de37"
+                }
+            ]
         }
     ],
     "location": [
@@ -71,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742927460
+    "modified": 1743044623
 }

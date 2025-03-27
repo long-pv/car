@@ -45,7 +45,7 @@ if ($banner_image) :
 <?php
 else:
 	echo '<div class="py-5"></div>';
-endif;
+endif; 
 ?>
 <!-- end banner -->
 
