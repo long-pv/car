@@ -1273,16 +1273,16 @@
 }
 
 .search_button {
-    padding: 16px 24px;
+    padding: 16px 24px !important;
     background-color: #0052FF !important;
     font-size: 20px !important;
     font-weight: 600 !important;
-    line-height: 28px;
+    line-height: 28px !important;
     color: #FFFFFF !important;
-    border-radius: 1000px;
+    border-radius: 1000px !important;
     outline: none !important;
     border: none !important;
-    min-width: 150px;
+    min-width: 150px !important;
     transition: all 0.3s;
 }
 

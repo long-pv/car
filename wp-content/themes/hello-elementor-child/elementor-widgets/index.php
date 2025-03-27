@@ -20,6 +20,8 @@ function register_custom_widgets($widgets_manager)
     require_once TEMPLATE_PATH . 'Ecosystem_Widget.php';
     require_once TEMPLATE_PATH . 'Eco_System_Banner_Widget.php';
     require_once TEMPLATE_PATH . 'Staff_About_Widget.php';
+    require_once TEMPLATE_PATH . 'Recruitment_Widget.php';
+    require_once TEMPLATE_PATH . 'Post_By_Cat.php';
 
     // Register widgets
     $widgets_manager->register(new \Header_Widget());
@@ -38,6 +40,8 @@ function register_custom_widgets($widgets_manager)
     $widgets_manager->register(new \Ecosystem_Widget());
     $widgets_manager->register(new \Eco_System_Banner_Widget());
     $widgets_manager->register(new \Staff_About_Widget());
+    $widgets_manager->register(new \Recruitment_Widget());
+    $widgets_manager->register(new \Post_By_Cat());
 }
 add_action('elementor/widgets/register', 'register_custom_widgets');
 
