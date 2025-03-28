@@ -227,7 +227,7 @@ Trở thành đối tác của CarDoctor!
 				<div class="modal-content modal_custom_content">
 					<div class="modal-body modal_custom_body">
 						<?php
-						echo do_shortcode('[contact-form-7 id="fb50fff" title="Đăng ký"]');
+						echo do_shortcode('[contact-form-7 id="7f868da" title="Đăng ký"]');
 						?>
 					</div>
 				</div>

@@ -263,6 +263,45 @@
 	$(".btn_form_thong_tin").click(function () {
 		$("#form_thong_tin").modal("show");
 	});
+
+	$(".custom_dropdown_button").on("click", function (e) {
+		e.stopPropagation();
+		$(".custom_dropdown_button").removeClass("down_show");
+		var dropdownMenu = $(this).next(".custom_dropdown_menu");
+		$(".custom_dropdown_menu").not(dropdownMenu).hide();
+		$(this).toggleClass("down_show");
+		dropdownMenu.toggle();
+	});
+
+	$(document).on("click", function () {
+		$(".custom_dropdown_menu").hide();
+		$(".custom_dropdown_button").removeClass("down_show");
+	});
+
+	$(".custom_dropdown_menu").on("click", function (e) {
+		e.stopPropagation();
+	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+		document.addEventListener("wpcf7invalid", function (event) {
+			const checkboxes = document.querySelectorAll('input[name="service[]"]');
+			let isChecked = false;
+
+			checkboxes.forEach((checkbox) => {
+				if (checkbox.checked) {
+					isChecked = true;
+				}
+			});
+
+			if (!isChecked) {
+				const dropdownMenu = document.querySelector(".custom_dropdown_menu");
+				if (dropdownMenu) {
+					dropdownMenu.style.display = "block";
+				}
+			}
+		});
+	});
+
 	// ----- vucoder ------
 	//
 	//
