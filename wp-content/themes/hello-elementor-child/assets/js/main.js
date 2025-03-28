@@ -263,6 +263,9 @@
 	$(".btn_form_thong_tin").click(function () {
 		$("#form_thong_tin").modal("show");
 	});
+	$(".btn_form_thong_tin_thanh_cong").click(function () {
+		$("#form_thong_tin_thanh_cong").modal("show");
+	});
 
 	$(".custom_dropdown_button").on("click", function (e) {
 		e.stopPropagation();

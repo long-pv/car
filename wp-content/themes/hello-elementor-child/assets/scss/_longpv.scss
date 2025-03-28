@@ -1905,3 +1905,27 @@ select.form_control {
 .custom_dropdown_menu label:last-child {
     margin-bottom: 0;
 }
+
+.form_thanh_cong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .icon {
+        margin-bottom: 48px;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #354764;
+    }
+
+    .desc {
+        color: #5D6B82;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
