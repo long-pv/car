@@ -133,7 +133,7 @@ Trở thành đối tác của CarDoctor!
 </div> 
 -->
 
-<!-- 
+<!--
 <div class="modal_custom_title">
 	Thông tin khách hàng
 </div>
@@ -161,7 +161,12 @@ Trở thành đối tác của CarDoctor!
 	<div class="row">
 		<div class="col-12">
 			<label for="service" class="form_label">Dịch vụ Garage của quý khách cung cấp <span class="req">*</span></label>
-			[select* service multiple class:form_control "Bảo dưỡng" "Sửa chữa" "Sơn xe" "Khác"]
+			<div class="custom_dropdown">
+				<div class="custom_dropdown_button">Chọn dịch vụ</div>
+				<div class="custom_dropdown_menu">
+					[checkbox* service use_label_element "Sửa xe" "Car Spa" "Độ xe" "Khác"]
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -176,7 +181,7 @@ Trở thành đối tác của CarDoctor!
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 -->
 
 <div class="pb-5" style="background-color: #c0c0c0;padding-top:150px;">
