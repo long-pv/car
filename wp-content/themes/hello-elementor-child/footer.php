@@ -252,7 +252,13 @@ if ($form_hop_tac):
                             ?>
                         </div>
                         <div class="desc">
-                            Cảm ơn quý anh/chị đã tin tưởng lựa chọn CarDoctor làm đối tác , hy vọng trong tương lai không xa chúng ta sẽ cùng nhau phát triển cộng đồng dịch vụ ô tô , vui lòng để ý điện thoại 
+                            <?php
+                            if (LANG == 'en') {
+                                echo "Thank you for trusting us and choosing us as your partner. We hope that in the near future, we can work together to develop the automotive service community. Please keep your phone on";
+                            } else {
+                                echo "Cảm ơn quý anh/chị đã tin tưởng lựa chọn CarDoctor làm đối tác , hy vọng trong tương lai không xa chúng ta sẽ cùng nhau phát triển cộng đồng dịch vụ ô tô , vui lòng để ý điện thoại";
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -395,12 +401,13 @@ if ($form_thong_tin):
                 "wpcf7mailsent",
                 function(event) {
                     <?php
+                    $page_id = get_the_ID();
                     if (LANG == 'en') {
                         $page_thong_tin = get_field('page_lead_form_2_en', 'option') ?? null;
                     } else {
                         $page_thong_tin = get_field('page_lead_form_2', 'option') ?? null;
                     }
-                    if ($page_thong_tin) {
+                    if ($page_thong_tin == $page_id) {
                     ?>
                         $("#form_thong_tin").modal("hide");
                         $("#form_thong_tin_thanh_cong").modal("show");
@@ -414,7 +421,7 @@ if ($form_thong_tin):
                     } else {
                         $page_ung_tuyen = get_field('page_lead_form_1', 'option') ?? null;
                     }
-                    if ($page_ung_tuyen) {
+                    if ($page_ung_tuyen == $page_id) {
                     ?>
                         $("#form_ung_tuyen").modal("hide");
                         $("#form_ung_tuyen_thanh_cong").modal("show");
@@ -428,7 +435,7 @@ if ($form_thong_tin):
                     } else {
                         $page_hop_tac = get_field('page_lead_form_3', 'option') ?? null;
                     }
-                    if ($page_hop_tac) {
+                    if ($page_hop_tac == $page_id) {
                     ?>
                         $("#form_hop_tac").modal("hide");
                         $("#form_hop_tac_thanh_cong").modal("show");
