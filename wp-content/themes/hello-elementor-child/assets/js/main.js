@@ -251,6 +251,18 @@
 			$(".ket_qua").html("");
 		}
 	});
+
+	$(".btn_form_hop_tac").click(function () {
+		$("#form_hop_tac").modal("show");
+	});
+
+	$(".btn_form_ung_tuyen").click(function () {
+		$("#form_ung_tuyen").modal("show");
+	});
+
+	$(".btn_form_thong_tin").click(function () {
+		$("#form_thong_tin").modal("show");
+	});
 	// ----- vucoder ------
 	//
 	//

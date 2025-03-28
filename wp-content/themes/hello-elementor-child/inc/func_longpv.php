@@ -70,3 +70,14 @@ function customize_search_query($query)
     }
 }
 add_action('pre_get_posts', 'customize_search_query');
+
+function modify_cf7_checkbox_label($content)
+{
+    $content = str_replace(
+        '<span class="wpcf7-list-item-label">Tôi đồng ý</span>',
+        '<span class="wpcf7-list-item-label">Tôi đồng ý với <a href="https://example.com/dieu-khoan" target="_blank">các điều khoản dịch vụ</a> và <a href="https://example.com/chinh-sach" target="_blank">chính sách bảo mật</a> của CarDoctor</span>',
+        $content
+    );
+    return $content;
+}
+add_filter('wpcf7_form_elements', 'modify_cf7_checkbox_label');
