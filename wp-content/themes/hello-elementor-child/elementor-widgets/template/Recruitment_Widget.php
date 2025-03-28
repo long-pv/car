@@ -158,7 +158,7 @@ class Recruitment_Widget extends \Elementor\Widget_Base
                                 <?php echo get_field('job_description'); ?>
                             </div>
                             <div class="accordion_job_btn_wrap">
-                                <button type="button" class="accordion_job_btn">
+                                <button type="button" class="accordion_job_btn btn_form_ung_tuyen">
                                     <?php echo LANG == 'en' ? 'Apply' : 'Ứng tuyển'; ?>
                                 </button>
                             </div>
