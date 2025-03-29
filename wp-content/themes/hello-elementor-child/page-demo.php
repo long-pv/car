@@ -60,7 +60,7 @@ Trở thành đối tác của CarDoctor!
 	</div>
 	<div class="row">
 		<div class="col-12">
-			[checkbox* checkbox-162 class:form_check_input use_label_element "Tôi đồng ý"]
+			[checkbox* agree_to_terms class:form_check_input use_label_element "Tôi đồng ý"]
 		</div>
 	</div>
 	<div class="row">
@@ -112,7 +112,7 @@ Trở thành đối tác của CarDoctor!
 		<div class="col-12">
 			<div for="cv_upload" class="form_label">Upload CV/Portfolio <span class="req">*</span></div>
 			<label class="form_file_label">
-				[file* cv_upload class:form_file filetypes:pdf/*|doc/*|docx/* limit:2mb]
+				[file* cv_upload class:form_file filetypes:pdf|doc|docx limit:2mb]
 				<span class="form_note">Doc, Docx, PDF (<25MB) <span>Tải file lên</span></span>
 
 			</label>
@@ -120,7 +120,7 @@ Trở thành đối tác của CarDoctor!
 	</div>
 	<div class="row">
 		<div class="col-12">
-			[checkbox* terms class:form_check_input use_label_element "Tôi đồng ý"]
+			[checkbox* agree_to_terms class:form_check_input use_label_element "Tôi đồng ý"]
 		</div>
 	</div>
 	<div class="row">
@@ -130,7 +130,7 @@ Trở thành đối tác của CarDoctor!
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 -->
 
 <!--
@@ -171,7 +171,7 @@ Trở thành đối tác của CarDoctor!
 	</div>
 	<div class="row">
 		<div class="col-12">
-			[checkbox* checkbox-terms class:form_check_input use_label_element "Tôi đồng ý với các điều khoản dịch vụ và chính sách bảo mật của CarDoctor"]
+			[checkbox* agree_to_terms class:form_check_input use_label_element "Tôi đồng ý"]
 		</div>
 	</div>
 	<div class="row">
@@ -183,6 +183,167 @@ Trở thành đối tác của CarDoctor!
 	</div>
 </div>
 -->
+
+<!-- <div class="modal_custom_title">
+	Customer Information
+</div>
+<div class="form_group">
+	<div class="row">
+		<div class="col-md-6">
+			<label for="garage_name" class="form_label">Garage’s Name <span class="req">*</span></label>
+			[text* garage_name class:form_control placeholder "Your garage’s name "]
+		</div>
+		<div class="col-md-6">
+			<label for="full_name" class="form_label">Full Name <span class="req">*</span></label>
+			[text* full_name class:form_control placeholder "Your full name"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label for="garage_address" class="form_label">Your Garage’s Address <span class="req">*</span></label>
+			[text* garage_address class:form_control placeholder "Your garage’s address"]
+		</div>
+		<div class="col-md-6">
+			<label for="phone_number" class="form_label">Phone Number <span class="req">*</span></label>
+			[tel* phone_number class:form_control placeholder "Your phone Number"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<label for="service" class="form_label">Services provided by your garage <span class="req">*</span></label>
+			<div class="custom_dropdown">
+				<div class="custom_dropdown_button">Choose your service</div>
+				<div class="custom_dropdown_menu">
+					[checkbox* service use_label_element "Car Repair" "Car Spa" "Car Modifications" "Other"]
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			[checkbox* agree_to_terms class:form_check_input use_label_element "Tôi đồng ý"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="form_btn">
+				[submit class:btn class:btn_form_submit "SUBMIT"]
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- <div class="modal_custom_title">
+	Application information
+</div>
+<div class="form_group">
+	<div class="row">
+		<div class="col-md-6">
+			<label for="full_name" class="form_label">Full Name <span class="req">*</span></label>
+			[text* full_name class:form_control placeholder "Your full name"]
+		</div>
+		<div class="col-md-6">
+			<label for="job_position" class="form_label">Job Apply <span class="req">*</span></label>
+			[text* job_position class:form_control placeholder "Your job apply"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label for="email" class="form_label">Email <span class="req">*</span></label>
+			[email* email class:form_control placeholder "Your email"]
+		</div>
+		<div class="col-md-6">
+			<label for="phone_number" class="form_label">Phone Number <span class="req">*</span></label>
+			[tel* phone_number class:form_control placeholder "Your phone number"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<label for="work_location" class="form_label">Preferred Work Location </label>
+			[select work_location class:form_control form_select "Ho Chi Minh City" "Ha Noi City"]
+		</div>
+		<div class="col-md-12">
+			<label for="start_date" class="form_label">When can you start?</label>
+			[date start_date class:form_control placeholder "Choose your start time"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div for="cv_upload" class="form_label">Upload CV/Portfolio <span class="req">*</span></div>
+			<label class="form_file_label">
+				[file* cv_upload class:form_file filetypes:pdf|doc|docx limit:2mb]
+				<span class="form_note">Doc, Docx, PDF (<25MB) <span>Upload file</span></span>
+
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			[checkbox* agree_to_terms class:form_check_input use_label_element "Tôi đồng ý"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="form_btn">
+				[submit class:btn class:btn_form_submit "APPLY NOW"]
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- <div class="modal_custom_title">
+	Become CarDoctor’s Partner
+</div>
+<div class="form_group">
+	<div class="row">
+		<div class="col-md-6">
+			<label for="company_name" class="form_label">Company‘s name <span class="req">*</span></label>
+			[text* company_name class:form_control placeholder "Your company‘s name"]
+		</div>
+		<div class="col-md-6">
+			<label for="full_name" class="form_label">Full name <span class="req">*</span></label>
+			[text* full_name class:form_control placeholder "Your full name"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label for="email" class="form_label">Email <span class="req">*</span></label>
+			[email* email class:form_control placeholder "Your email"]
+		</div>
+		<div class="col-md-6">
+			<label for="phone_number" class="form_label">Phone Number <span class="req">*</span></label>
+			[tel* phone_number class:form_control placeholder "Your phone number"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label for="company_address" class="form_label">Company’ s address <span class="req">*</span></label>
+			[text* company_address class:form_control placeholder "Your company’s address"]
+		</div>
+		<div class="col-md-6">
+			<label for="website" class="form_label">Your company website‘s URL</label>
+			[url website class:form_control placeholder "Your website‘s URL"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<label for="message" class="form_label">How can CarDoctor help you? Leave us a message!</label>
+			[textarea message class:form_textarea placeholder "Enter information"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			[checkbox* agree_to_terms class:form_check_input use_label_element "Tôi đồng ý"]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="form_btn">
+				[submit class:btn class:btn_form_submit "SUBMIT"]
+			</div>
+		</div>
+	</div>
+</div> -->
 
 <div class="pb-5" style="background-color: #c0c0c0;padding-top:150px;">
 	<div class="container">
