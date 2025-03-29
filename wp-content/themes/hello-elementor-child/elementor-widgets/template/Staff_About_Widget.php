@@ -64,7 +64,7 @@ class Staff_About_Widget extends \Elementor\Widget_Base
                         'bio' => $bio,
                     ];
 
-                    if ($index % 4 == 0) {
+                    if ($index % 2 == 0) {
                         $index_arr++;
                     }
 
