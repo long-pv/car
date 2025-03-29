@@ -40,7 +40,18 @@ class Eco_System_Banner_Widget extends \Elementor\Widget_Base
                 'label' => __('Featured Image', 'child_theme'),
                 'type' => \Elementor\Controls_Manager::MEDIA,
                 'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                    'url' => '',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'featured_image_mb',
+            [
+                'label' => __('Featured Image (Mobile)', 'child_theme'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => '',
                 ],
             ]
         );
@@ -166,6 +177,37 @@ class Eco_System_Banner_Widget extends \Elementor\Widget_Base
                         ?>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="eco_system_banner_mb">
+                <?php
+                foreach (array_slice($settings['left_list'], 0, 3) as $item) :
+                ?>
+                    <div class="short_service_item_mb">
+                        <img class="icon" src="<?php echo $item['left_item_image']['url']; ?>" alt="Left Item">
+                        <?php if ($item['left_item_link']['url']) : ?>
+                            <a class="link" href="<?php echo $item['left_item_link']['url']; ?>"></a>
+                        <?php endif; ?>
+                    </div>
+                <?php
+                endforeach;
+                ?>
+
+                <?php
+                foreach (array_slice($settings['right_list'], 0, 4) as $item) :
+                ?>
+                    <div class="short_service_item_mb">
+                        <img class="icon" src="<?php echo $item['right_item_image']['url']; ?>" alt="Right Item">
+                        <?php if ($item['right_item_link']['url']) : ?>
+                            <a class="link" href="<?php echo $item['right_item_link']['url']; ?>"></a>
+                        <?php endif; ?>
+                    </div>
+                <?php
+                endforeach;
+                ?>
+
+                <img class="featured_img_mb" src="<?php echo esc_url($settings['featured_image_mb']['url']); ?>" alt="Featured Image Moble">
             </div>
         </div>
 <?php

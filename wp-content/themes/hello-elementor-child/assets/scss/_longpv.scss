@@ -997,7 +997,7 @@
 
     .eco_system_banner_inner {
         position: relative;
-        display: flex;
+        display: none;
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
@@ -1006,6 +1006,7 @@
         @media (min-width: 1024px) {
             padding-left: 270px;
             padding-right: 270px;
+            display: flex;
         }
     }
 
@@ -2040,6 +2041,94 @@ select.form_control {
             color: #354764 !important;
             font-size: 14px;
             font-weight: 500;
+        }
+    }
+}
+
+.eco_system_banner_mb {
+    @media (min-width: 1024px) {
+        display: none;
+    }
+
+    width: 326px;
+    height: 440px;
+    flex-shrink: 0;
+    position: relative;
+
+    .featured_img_mb {
+        width: 321px;
+        height: 242px;
+        object-fit: cover;
+        top: 105px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: 1;
+    }
+
+    .short_service_item_mb {
+        background-image: url('../images/img_1_2.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 2;
+
+        .icon {
+            position: absolute;
+            width: 42px;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .link {
+            position: absolute;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+        }
+
+        &:nth-child(1) {
+            top: 44px;
+            left: 0px;
+        }
+
+        &:nth-child(2) {
+            top: 0px;
+            left: 75px;
+        }
+
+        &:nth-child(3) {
+            top: 0px;
+            right: 75px;
+        }
+
+        &:nth-child(4) {
+            top: 44px;
+            right: 0px;
+        }
+
+        &:nth-child(5) {
+            bottom: 20px;
+            left: 33px;
+        }
+
+        &:nth-child(6) {
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:nth-child(7) {
+            bottom: 20px;
+            right: 33px;
         }
     }
 }
