@@ -16,6 +16,10 @@
         img {
             max-width: 100%;
             height: auto;
+
+            @media (min-width: 1024px) {
+                width: 200px !important;
+            }
         }
     }
 

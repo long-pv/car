@@ -55,12 +55,17 @@ class Departments_Widget extends \Elementor\Widget_Base
                                             <h3 class="department_title">
                                                 <?php the_title(); ?>
                                             </h3>
+                                            <div class="imgGroup department_image_mb d-lg-none">
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                                                <?php endif; ?>
+                                            </div>
                                             <div class="department_desc">
                                                 <?php the_content(); ?>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 d-none d-lg-block">
                                         <div class="department_image">
                                             <?php if (has_post_thumbnail()) : ?>
                                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">

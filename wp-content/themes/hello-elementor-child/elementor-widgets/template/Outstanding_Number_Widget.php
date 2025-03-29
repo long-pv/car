@@ -78,13 +78,30 @@ class Outstanding_Number_Widget extends \Elementor\Widget_Base
     {
         $settings = $this->get_settings_for_display();
 ?>
-        <div class="car_animation">
+        <div class="car_animation d-none d-lg-block">
             <?php foreach ($settings['items'] as $key => $item) : ?>
                 <div class="car_animation_block" data-pos="<?php echo ($key + 1); ?>">
                     <div class="car_animation_number"><?php echo esc_html($item['number']); ?></div>
                     <div class="car_animation_text"><?php echo esc_html($item['text']); ?></div>
                 </div>
             <?php endforeach; ?>
+        </div>
+
+        <div class="car_animation_mb d-lg-none">
+            <div class="row">
+                <?php foreach ($settings['items'] as $key => $item) : ?>
+                    <div class="col-6">
+                        <div class="content">
+                            <div class="title">
+                                <?php echo esc_html($item['number']); ?>
+                            </div>
+                            <div class="desc">
+                                <?php echo esc_html($item['text']); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
 <?php
     }

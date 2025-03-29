@@ -71,7 +71,6 @@ class Short_Service_Widget extends Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
         <div class="short_service_box">
-            <img class="short_service_img_center" src="<?php echo CHILD_URI . '/assets/images/center_service.png'; ?>" alt="DriverPlus">
             <div class="short_service">
                 <?php foreach ($settings['services_list'] as $service) : ?>
                     <div class="short_service_item">
@@ -79,6 +78,7 @@ class Short_Service_Widget extends Widget_Base
                     </div>
                 <?php endforeach; ?>
             </div>
+            <img class="short_service_img_center" src="<?php echo CHILD_URI . '/assets/images/center_service.png'; ?>" alt="DriverPlus">
         </div>
 <?php
     }
