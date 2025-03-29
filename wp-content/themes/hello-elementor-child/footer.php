@@ -168,16 +168,15 @@
             } else {
                 $policy_page = get_field('policy_page', 'option') ?? [];
             }
-
             if (!empty($policy_page) && is_array($policy_page)) {
                 $links = [];
 
-                foreach ($policy_page as $page_id) {
-                    $page_title = get_the_title($page_id);
-                    $page_link = get_permalink($page_id);
+                foreach ($policy_page as $item) {
+                    if (isset($item['link']['title'], $item['link']['url'])) {
+                        $page_title = esc_html($item['link']['title']);
+                        $page_link = esc_url($item['link']['url']);
 
-                    if ($page_title && $page_link) {
-                        $links[] = '<a href="' . esc_url($page_link) . '">' . esc_html($page_title) . '</a>';
+                        $links[] = '<a href="' . $page_link . '">' . $page_title . '</a>';
                     }
                 }
 

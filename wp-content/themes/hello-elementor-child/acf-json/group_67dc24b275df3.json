@@ -319,7 +319,7 @@
             "label": "Policy page",
             "name": "policy_page",
             "aria-label": "",
-            "type": "relationship",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -328,29 +328,39 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "page"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
-            "return_format": "id",
-            "min": 1,
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
             "max": 2,
-            "elements": "",
-            "bidirectional": 0,
-            "bidirectional_target": []
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67e7cc6578164",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "",
+                    "parent_repeater": "field_67dc4d58dc4b9"
+                }
+            ]
         },
         {
-            "key": "field_67e0eba47f2a3",
+            "key": "field_67e7cc7f78165",
             "label": "Policy page (EN)",
             "name": "policy_page_en",
             "aria-label": "",
-            "type": "relationship",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -359,22 +369,32 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "page"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
-            "return_format": "id",
-            "min": 1,
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
             "max": 2,
-            "elements": "",
-            "bidirectional": 0,
-            "bidirectional_target": []
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67e7cc7f78166",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_67e7cc7f78165"
+                }
+            ]
         },
         {
             "key": "field_67dc4f36b28bd",
@@ -883,5 +903,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743183230
+    "modified": 1743244525
 }
