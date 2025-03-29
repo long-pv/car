@@ -65,6 +65,7 @@
 			autoplaySpeed: 5000,
 			dots: false,
 			arrows: true,
+			adaptiveHeight: true,
 		});
 	};
 
@@ -81,6 +82,7 @@
 			autoplaySpeed: 5000,
 			arrows: true,
 			dots: false,
+			adaptiveHeight: true,
 			responsive: [
 				{
 					breakpoint: 1024,
@@ -112,6 +114,7 @@
 			autoplaySpeed: 5000,
 			dots: false,
 			arrows: true,
+			adaptiveHeight: true,
 		});
 	};
 
@@ -202,6 +205,7 @@
 		arrows: false,
 		autoplay: true,
 		autoplaySpeed: 5000,
+		adaptiveHeight: true,
 		responsive: [
 			{
 				breakpoint: 1024,
