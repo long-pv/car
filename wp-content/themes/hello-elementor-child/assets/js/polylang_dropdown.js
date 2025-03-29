@@ -21,6 +21,9 @@
 			current_lang.remove();
 
 			var top = 4;
+			if ($(window).width() < 1024) {
+				top = 0;
+			}
 			switchLang_item.children("li:not(.init)").each(function () {
 				$(this).css("top", "calc(100% + " + top + "px)");
 				top = top + $(this).outerHeight();

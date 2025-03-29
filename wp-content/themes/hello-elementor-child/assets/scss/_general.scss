@@ -47,6 +47,12 @@ body {
     }
 }
 
+.elementor-widget-icon-box {
+    .elementor-icon-box-title {
+        margin-top: 0px !important;
+    }
+}
+
 // ---------- line ------------
 @mixin line-clamp($lines) {
     -webkit-line-clamp: $lines;
