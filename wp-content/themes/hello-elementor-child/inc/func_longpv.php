@@ -64,7 +64,7 @@ function pagination($query = null)
 
 function customize_search_query($query)
 {
-    if ($query->is_search() && $query->is_main_query()) {
+    if (!is_admin() && $query->is_search() && $query->is_main_query()) {
         $query->set('post_type', 'post'); // Chỉ tìm trong bài viết
         $query->set('posts_per_page', 5); // Giới hạn 5 bài trên mỗi trang
     }
